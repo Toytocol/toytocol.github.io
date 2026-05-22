@@ -1363,5 +1363,86 @@ top:70%;
 right:28%;
 }
 
+/* =========================
+   RADAR SYSTEM
+========================= */
 
+.radar-center{
+position:absolute;
+top:50%;
+left:50%;
+
+width:8px;
+height:8px;
+
+background:#ff2a2a;
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+box-shadow:
+0 0 10px red,
+0 0 20px red;
+
+z-index:6;
+}
+
+/* RINGS */
+
+.radar-ring{
+position:absolute;
+
+top:50%;
+left:50%;
+
+border:1px solid rgba(0,255,0,0.08);
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+animation:radarPulse 6s infinite;
+
+z-index:2;
+}
+
+.ring1{
+width:180px;
+height:180px;
+}
+
+.ring2{
+width:320px;
+height:320px;
+animation-delay:2s;
+}
+
+.ring3{
+width:480px;
+height:480px;
+animation-delay:4s;
+}
+
+/* PULSE */
+
+@keyframes radarPulse{
+
+0%{
+opacity:0;
+transform:
+translate(-50%,-50%)
+scale(0.8);
+}
+
+50%{
+opacity:0.2;
+}
+
+100%{
+opacity:0;
+transform:
+translate(-50%,-50%)
+scale(1.1);
+}
+
+}
 
