@@ -177,3 +177,28 @@ UNAUTHORIZED ACCESS MAY RESULT IN
 TIMELINE INSTABILITY.
 
 `);
+
+/* =========================
+   LIVE CLOCK
+========================= */
+
+function updateClock(){
+
+const now = new Date();
+
+const time =
+now.toLocaleTimeString();
+
+const clock =
+document.getElementById("live-time");
+
+if(clock){
+
+clock.innerHTML =
+`UTC ${time}`;
+
+}
+
+}
+
+setInterval(updateClock,1000);
