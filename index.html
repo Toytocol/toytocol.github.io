@@ -357,20 +357,64 @@ align-items:center;
 min-height:400px;
 background:
 radial-gradient(circle at center, rgba(255,0,0,0.08), transparent 70%);
+background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+opacity:0.9;
+}
+
+ .scanner-line{
+position:absolute;
+width:100%;
+height:4px;
+background:red;
+top:0;
+left:0;
+box-shadow:0 0 20px red;
+animation:scanMove 4s linear infinite;
+opacity:0.5;
+}
+
+@keyframes scanMove{
+
+0%{
+top:0%;
+}
+
+100%{
+top:100%;
+}
+
 }
 
 .map-overlay img{
-width:280px;
+width:420px;
 opacity:0.9;
 filter:drop-shadow(0 0 20px rgba(255,0,0,0.3));
+animation:rotateLogo 20s linear infinite;
+ @keyframes rotateLogo{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
 }
 
 .ping{
 position:absolute;
-width:20px;
-height:20px;
-background:red;
+width:14px;
+height:14px;
+background:#ff2a2a;
 border-radius:50%;
+box-shadow:
+0 0 10px red,
+0 0 20px red;
 animation:ping 2s infinite;
 }
 
@@ -1307,7 +1351,7 @@ GLOBAL SURVEILLANCE GRID
 <div class="map-section">
 
 <div class="map-overlay">
-
+<div class="scanner-line"></div>
 <div class="ping ping1"></div>
 <div class="ping ping2"></div>
 <div class="ping ping3"></div>
