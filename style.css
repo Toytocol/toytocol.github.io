@@ -1075,14 +1075,99 @@ transform:translateY(0);
 }
 
 }
+/* =========================
+   LIVE INTELLIGENCE FEED
+========================= */
+
 .intel-feed{
 position:absolute;
-top:420px;
+
 left:25px;
+bottom:25px;
+
 width:420px;
-z-index:8;
-background:rgba(0,0,0,0.75);
+height:170px;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+180deg,
+rgba(0,0,0,0.75),
+rgba(0,0,0,0.9)
+);
+
+border:
+1px solid rgba(0,255,0,0.12);
+
 backdrop-filter:blur(3px);
+
+z-index:8;
+}
+
+/* HEADER */
+
+.intel-header{
+padding:12px 15px;
+
+font-size:0.7rem;
+
+letter-spacing:3px;
+
+color:#ff4747;
+
+border-bottom:
+1px solid rgba(255,255,255,0.05);
+
+background:rgba(255,0,0,0.03);
+}
+
+/* ITEMS */
+
+.intel-item{
+display:flex;
+gap:15px;
+
+padding:10px 15px;
+
+font-size:0.72rem;
+
+border-bottom:
+1px solid rgba(255,255,255,0.03);
+
+opacity:0.75;
+
+animation:intelAppear 0.4s ease;
+}
+
+.intel-item span{
+color:#77ff77;
+min-width:85px;
+}
+
+.intel-item p{
+line-height:1.4;
+}
+
+/* SCROLL EFFECT */
+
+.intel-feed::after{
+content:'';
+
+position:absolute;
+bottom:0;
+left:0;
+
+width:100%;
+height:40px;
+
+background:
+linear-gradient(
+transparent,
+rgba(0,0,0,0.95)
+);
+
+pointer-events:none;
 }
 
 
