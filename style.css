@@ -705,3 +705,33 @@ visibility:hidden;
 }
 
 }
+
+
+.containment-screen{
+position:relative;
+border:1px solid rgba(0,255,0,0.15);
+overflow:hidden;
+background:black;
+}
+
+.containment-image{
+width:100%;
+display:block;
+opacity:0.9;
+filter:
+contrast(1.1)
+brightness(0.8)
+grayscale(0.2);
+}
+
+.threat-box{
+position:absolute;
+bottom:30px;
+right:30px;
+border:1px solid rgba(255,255,255,0.15);
+padding:15px 20px;
+background:rgba(0,0,0,0.7);
+color:#e6dcc7;
+letter-spacing:2px;
+line-height:1.6;
+}
