@@ -404,9 +404,9 @@ left:48%;
 .dashboard{
 display:grid;
 grid-template-columns:
-280px
+260px
 1fr
-320px;
+380px;
 gap:20px;
 padding:25px;
 min-height:100vh;
@@ -1075,9 +1075,7 @@ transform:translateY(0);
 }
 
 }
-/* =========================
-   LIVE INTELLIGENCE FEED
-========================= */
+
 
 /* =========================
    LIVE INTELLIGENCE FEED
