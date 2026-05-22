@@ -912,3 +912,124 @@ color:#e6dcc7;
 letter-spacing:2px;
 line-height:1.6;
 }
+
+/* =========================
+   ATMOSPHERIC DUST
+========================= */
+
+.dust{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,0.04);
+filter:blur(2px);
+animation:floatDust linear infinite;
+z-index:1;
+}
+
+/* INDIVIDUAL PARTICLES */
+
+.dust1{
+width:4px;
+height:4px;
+top:20%;
+left:10%;
+animation-duration:18s;
+}
+
+.dust2{
+width:6px;
+height:6px;
+top:60%;
+left:70%;
+animation-duration:25s;
+}
+
+.dust3{
+width:3px;
+height:3px;
+top:40%;
+left:40%;
+animation-duration:14s;
+}
+
+.dust4{
+width:5px;
+height:5px;
+top:80%;
+left:20%;
+animation-duration:30s;
+}
+
+.dust5{
+width:4px;
+height:4px;
+top:30%;
+left:85%;
+animation-duration:22s;
+}
+
+/* MOVEMENT */
+
+@keyframes floatDust{
+
+0%{
+transform:
+translateY(0px)
+translateX(0px);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+80%{
+opacity:1;
+}
+
+100%{
+transform:
+translateY(-80px)
+translateX(20px);
+
+opacity:0;
+}
+
+}
+
+/* =========================
+   WARNING PULSE
+========================= */
+
+.warning-overlay{
+position:absolute;
+inset:0;
+
+background:
+radial-gradient(
+circle,
+transparent 60%,
+rgba(255,0,0,0.03)
+);
+
+animation:warningPulse 5s infinite;
+
+pointer-events:none;
+z-index:2;
+}
+
+@keyframes warningPulse{
+
+0%{
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+}
+
+}
