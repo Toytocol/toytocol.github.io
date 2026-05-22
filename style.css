@@ -613,3 +613,94 @@ opacity:1;
 }
 
 }
+
+
+/* =========================
+   BOOT SCREEN
+========================= */
+
+#boot-screen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+z-index:999999;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+animation:bootFade 1s ease forwards;
+animation-delay:4s;
+}
+
+.boot-container{
+width:700px;
+max-width:90%;
+}
+
+.boot-logo{
+font-size:2rem;
+margin-bottom:40px;
+color:#77ff77;
+letter-spacing:4px;
+}
+
+.boot-terminal{
+border:1px solid rgba(0,255,0,0.15);
+padding:30px;
+background:#050505;
+margin-bottom:30px;
+}
+
+.boot-terminal p{
+color:#77ff77;
+margin-bottom:15px;
+animation:flickerText 2s infinite;
+}
+
+.loading-bar{
+width:100%;
+height:18px;
+border:1px solid rgba(255,255,255,0.1);
+background:#050505;
+overflow:hidden;
+margin-bottom:25px;
+}
+
+.loading-fill{
+height:100%;
+width:0%;
+background:#77ff77;
+animation:loadBar 4s linear forwards;
+box-shadow:0 0 15px #77ff77;
+}
+
+.boot-warning{
+font-size:0.8rem;
+opacity:0.6;
+letter-spacing:2px;
+color:#ff4747;
+}
+
+@keyframes loadBar{
+
+0%{
+width:0%;
+}
+
+100%{
+width:100%;
+}
+
+}
+
+@keyframes bootFade{
+
+to{
+opacity:0;
+visibility:hidden;
+}
+
+}
