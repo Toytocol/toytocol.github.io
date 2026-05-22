@@ -284,4 +284,38 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
+
+
+.location{
+position:absolute;
+width:10px;
+height:10px;
+background:#ff4747;
+border-radius:50%;
+box-shadow:
+0 0 10px red,
+0 0 20px red;
+animation:pulse 2s infinite;
+}
+
+.tokyo{
+top:42%;
+left:78%;
+}
+
+.nyc{
+top:35%;
+left:28%;
+}
+
+.berlin{
+top:30%;
+left:52%;
+}
+
+.lagos{
+top:55%;
+left:48%;
+}
+
 }
