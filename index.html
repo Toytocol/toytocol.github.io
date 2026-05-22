@@ -39,6 +39,46 @@ text-shadow:0 0 10px #77ff77;
 }
 
 @keyframes bootFade{
+
+0%{
+opacity:1;
+}
+
+85%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+visibility:hidden;
+}
+
+}
+
+#boot-screen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+animation:bootFade 4s forwards;
+}
+
+.boot-text{
+color:#77ff77;
+font-size:1.2rem;
+text-align:left;
+line-height:2;
+font-family:'Share Tech Mono', monospace;
+text-shadow:0 0 10px #77ff77;
+}
+
+@keyframes bootFade{
 0%{
 opacity:1;
 }
