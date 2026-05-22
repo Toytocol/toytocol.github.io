@@ -473,6 +473,40 @@ margin-left:6px;
 animation:blink 1s infinite;
 }
 
+.intel-feed{
+background:#080808;
+border:1px solid rgba(255,255,255,0.08);
+padding:35px;
+margin-top:30px;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.intel-item{
+padding:20px;
+border-left:3px solid #ff4747;
+background:rgba(255,255,255,0.02);
+transition:0.3s;
+}
+
+.intel-item:hover{
+transform:translateX(5px);
+background:rgba(255,0,0,0.04);
+}
+
+.intel-item span{
+color:#77ff77;
+font-size:0.9rem;
+display:block;
+margin-bottom:10px;
+}
+
+.intel-item p{
+line-height:1.7;
+opacity:0.85;
+}
+ 
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -607,6 +641,42 @@ margin-top:30px;
 padding-top:20px;
 border-top:1px solid rgba(255,255,255,0.08);
 } 
+
+ .intel-feed{
+background:#080808;
+border:1px solid rgba(255,255,255,0.08);
+padding:35px;
+margin-top:30px;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.intel-item{
+padding:20px;
+border-left:3px solid #ff4747;
+background:rgba(255,255,255,0.02);
+transition:0.3s;
+}
+
+.intel-item:hover{
+transform:translateX(5px);
+background:rgba(255,0,0,0.04);
+}
+
+.intel-item span{
+color:#77ff77;
+font-size:0.9rem;
+display:block;
+margin-bottom:10px;
+}
+
+.intel-item p{
+line-height:1.7;
+opacity:0.85;
+}
+
+ 
   
 @keyframes blink{
 50%{opacity:0;}
@@ -957,7 +1027,45 @@ CLASSIFIED ARCHIVES
 </div>
 
 </section> 
-  
+
+
+<section class="section">
+
+<h2 class="section-title">
+LIVE INTELLIGENCE FEED
+</h2>
+
+<div class="intel-feed">
+
+<div class="intel-item">
+<span>[03:14 UTC]</span>
+<p>Unusual meme volatility detected in Eastern Europe.</p>
+</div>
+
+<div class="intel-item">
+<span>[04:02 UTC]</span>
+<p>Unauthorized tuna transfer intercepted.</p>
+</div>
+
+<div class="intel-item">
+<span>[05:47 UTC]</span>
+<p>Signal believed to originate from Agent PAW-TIVE.</p>
+</div>
+
+<div class="intel-item">
+<span>[07:11 UTC]</span>
+<p>Corporate meme contamination levels increasing.</p>
+</div>
+
+<div class="intel-item">
+<span>[08:33 UTC]</span>
+<p>TOYTOCOL surveillance grid fully operational.</p>
+</div>
+
+</div>
+
+</section>
+ 
 <footer>
 
 TOYTOCOL // MEME PRESERVATION PROTOCOL // EST. 1998
