@@ -1606,3 +1606,179 @@ scale(1.1);
 
 }
 
+/* =========================
+   TARGETING RING
+========================= */
+
+.target-ring{
+position:absolute;
+
+top:48%;
+left:53%;
+
+width:220px;
+height:220px;
+
+border:
+1px solid rgba(0,255,0,0.12);
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+animation:rotateRing 20s linear infinite;
+
+z-index:5;
+}
+
+/* INNER TARGET */
+
+.target-ring::before{
+content:'';
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+width:120px;
+height:120px;
+
+border:
+1px solid rgba(255,0,0,0.12);
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+}
+
+/* ROTATION */
+
+@keyframes rotateRing{
+
+from{
+transform:
+translate(-50%,-50%)
+rotate(0deg);
+}
+
+to{
+transform:
+translate(-50%,-50%)
+rotate(360deg);
+}
+
+}
+
+/* =========================
+   TARGET RETICLES
+========================= */
+
+.reticle{
+position:absolute;
+
+width:40px;
+height:40px;
+
+border:
+1px solid rgba(255,0,0,0.25);
+
+z-index:6;
+
+animation:reticlePulse 3s infinite;
+}
+
+.r1{
+top:38%;
+left:30%;
+}
+
+.r2{
+top:58%;
+right:25%;
+}
+
+/* RETICLE CORNERS */
+
+.reticle::before,
+.reticle::after{
+content:'';
+
+position:absolute;
+
+width:10px;
+height:10px;
+
+border:2px solid red;
+}
+
+.reticle::before{
+top:-2px;
+left:-2px;
+
+border-right:none;
+border-bottom:none;
+}
+
+.reticle::after{
+bottom:-2px;
+right:-2px;
+
+border-left:none;
+border-top:none;
+}
+
+/* PULSE */
+
+@keyframes reticlePulse{
+
+0%{
+opacity:0.2;
+transform:scale(1);
+}
+
+50%{
+opacity:0.8;
+transform:scale(1.05);
+}
+
+100%{
+opacity:0.2;
+transform:scale(1);
+}
+
+}
+
+/* =========================
+   SECTOR LABELS
+========================= */
+
+.sector-box{
+position:absolute;
+
+padding:8px 14px;
+
+border:
+1px solid rgba(0,255,0,0.1);
+
+background:
+rgba(0,0,0,0.6);
+
+font-size:0.7rem;
+
+letter-spacing:2px;
+
+color:#77ff77;
+
+z-index:6;
+}
+
+.s1{
+top:28%;
+left:18%;
+}
+
+.s2{
+bottom:22%;
+right:18%;
+}
