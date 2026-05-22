@@ -894,6 +894,71 @@ opacity:0.5;
 letter-spacing:2px;
 }
 
+ .dex-box{
+margin-top:30px;
+border:1px solid rgba(255,255,255,0.08);
+overflow:hidden;
+box-shadow:0 0 40px rgba(255,0,0,0.05);
+}
+
+ .alert-system{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.market-alert{
+padding:30px;
+border:1px solid rgba(255,255,255,0.08);
+background:#090909;
+transition:0.3s;
+position:relative;
+overflow:hidden;
+}
+
+.market-alert:hover{
+transform:translateY(-5px);
+}
+
+.market-alert h3{
+margin-bottom:18px;
+letter-spacing:2px;
+}
+
+.market-alert p{
+line-height:1.7;
+opacity:0.8;
+}
+
+.red-alert{
+border-left:4px solid #ff4747;
+}
+
+.green-alert{
+border-left:4px solid #77ff77;
+}
+
+.yellow-alert{
+border-left:4px solid #ffd447;
+}
+
+.blue-alert{
+border-left:4px solid #47a3ff;
+}
+
+.market-alert::before{
+content:'LIVE';
+position:absolute;
+top:12px;
+right:12px;
+font-size:0.7rem;
+color:#77ff77;
+letter-spacing:2px;
+}
+
+ 
+
 @media(max-width:900px){
 
 .recruit-stats{
@@ -1384,7 +1449,65 @@ WARNING: RECRUITMENT MAY RESULT IN UNEXPLAINED INTERNET ACTIVITY.
 </section>
 
 
- 
+ <section class="section">
+
+<h2 class="section-title">
+LIVE MEME VOLATILITY GRID
+</h2>
+
+<div class="dex-box">
+
+<iframe 
+src="https://dexscreener.com/solana?embed=1&theme=dark"
+width="100%"
+height="600"
+style="border:none;">
+</iframe>
+
+</div>
+
+</section>
+
+
+ <section class="section">
+
+<h2 class="section-title">
+MARKET ALERT SYSTEM
+</h2>
+
+<div class="alert-system">
+
+<div class="market-alert red-alert">
+<h3>⚠ HIGH VOLATILITY DETECTED</h3>
+<p>
+Sudden meme instability detected across decentralized networks.
+</p>
+</div>
+
+<div class="market-alert green-alert">
+<h3>✓ PROTOCOL STABLE</h3>
+<p>
+TOYTOCOL meme preservation systems remain operational.
+</p>
+</div>
+
+<div class="market-alert yellow-alert">
+<h3>⚠ SCAM ACTIVITY INCREASING</h3>
+<p>
+Unauthorized liquidity extraction attempts intercepted.
+</p>
+</div>
+
+<div class="market-alert blue-alert">
+<h3>⌘ AGENT SIGNAL DETECTED</h3>
+<p>
+Possible PAW-TIVE transmission received from unknown source.
+</p>
+</div>
+
+</div>
+
+</section>
 <footer>
 
 TOYTOCOL // MEME PRESERVATION PROTOCOL // EST. 1998
