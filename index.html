@@ -240,6 +240,49 @@ letter-spacing:3px;
 animation:pulse 2s infinite;
 }
 
+.wanted-box{
+display:grid;
+grid-template-columns:350px 1fr;
+gap:40px;
+align-items:center;
+background:#080808;
+border:1px solid rgba(255,255,255,0.08);
+padding:40px;
+margin-top:30px;
+}
+
+.wanted-image img{
+width:100%;
+border:2px solid rgba(255,0,0,0.2);
+box-shadow:0 0 40px rgba(255,0,0,0.1);
+}
+
+.wanted-info h1{
+font-size:2.5rem;
+margin-bottom:20px;
+color:#ff4d4d;
+}
+
+.wanted-info p{
+margin-bottom:18px;
+line-height:1.8;
+}
+
+.red-warning{
+color:#ff4747;
+font-size:1.2rem;
+letter-spacing:3px;
+margin-top:25px;
+}
+
+@media(max-width:900px){
+
+.wanted-box{
+grid-template-columns:1fr;
+}
+
+}
+
 .section{
 padding:60px 7%;
 }
@@ -344,6 +387,49 @@ margin-left:6px;
 animation:blink 1s infinite;
 }
 
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.stat-card{
+background:#090909;
+border:1px solid rgba(255,255,255,0.08);
+padding:35px;
+text-align:center;
+transition:0.3s;
+position:relative;
+overflow:hidden;
+}
+
+.stat-card:hover{
+border-color:#ff4747;
+transform:translateY(-5px);
+}
+
+.stat-card h1{
+font-size:2.5rem;
+margin-bottom:15px;
+color:#ff4747;
+text-shadow:0 0 15px rgba(255,0,0,0.3);
+}
+
+.stat-card p{
+letter-spacing:2px;
+opacity:0.7;
+}
+
+.stat-card::before{
+content:'LIVE';
+position:absolute;
+top:12px;
+right:12px;
+font-size:0.7rem;
+color:#77ff77;
+}
+  
 @keyframes blink{
 50%{opacity:0;}
 }
@@ -514,6 +600,87 @@ Unstable meme environments detected during low-chaos periods.
 
 </section>
 
+<section class="section">
+
+<h2 class="section-title">
+MOST WANTED
+</h2>
+
+<div class="wanted-box">
+
+<div class="wanted-image">
+<img src="agent.png">
+</div>
+
+<div class="wanted-info">
+
+<h1>TARGET: PAW-TIVE</h1>
+
+<p>
+STATUS: AT LARGE
+</p>
+
+<p>
+LAST KNOWN LOCATION:
+UNKNOWN
+</p>
+
+<p>
+THREAT LEVEL:
+CRITICAL
+</p>
+
+<p>
+KNOWN ACTIVITIES:
+- meme destabilization
+- unauthorized volatility
+- tuna smuggling
+- protocol breaches
+</p>
+
+<p class="red-warning">
+⚠ DO NOT APPROACH ⚠
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+ <section class="section">
+
+<h2 class="section-title">
+GLOBAL STATUS
+</h2>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h1>87%</h1>
+<p>CHAOS LEVEL</p>
+</div>
+
+<div class="stat-card">
+<h1>CRITICAL</h1>
+<p>MEME STABILITY</p>
+</div>
+
+<div class="stat-card">
+<h1>ACTIVE</h1>
+<p>SCAM DETECTION</p>
+</div>
+
+<div class="stat-card">
+<h1>RISING</h1>
+<p>VOLATILITY INDEX</p>
+</div>
+
+</div>
+
+</section>
+  
 <footer>
 
 TOYTOCOL // MEME PRESERVATION PROTOCOL // EST. 1998
