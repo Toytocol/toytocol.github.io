@@ -1,1 +1,256 @@
 
+/* =========================
+   CRT OVERLAY
+========================= */
+
+.crt{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+z-index:9999;
+
+background:
+repeating-linear-gradient(
+to bottom,
+rgba(255,255,255,0.02),
+rgba(255,255,255,0.02) 1px,
+transparent 1px,
+transparent 3px
+);
+
+mix-blend-mode:overlay;
+
+opacity:0.15;
+}
+
+/* =========================
+   SCANLINES
+========================= */
+
+.scanlines{
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+transparent 50%,
+rgba(0,0,0,0.18) 50%
+);
+
+background-size:100% 4px;
+
+opacity:0.2;
+
+pointer-events:none;
+
+z-index:9;
+}
+
+/* =========================
+   VIGNETTE
+========================= */
+
+.vignette{
+
+position:absolute;
+
+inset:0;
+
+background:
+radial-gradient(
+circle,
+transparent 45%,
+rgba(0,0,0,0.8)
+);
+
+z-index:1;
+
+pointer-events:none;
+}
+
+/* =========================
+   WARNING OVERLAY
+========================= */
+
+.warning-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+radial-gradient(
+circle,
+transparent 60%,
+rgba(255,0,0,0.03)
+);
+
+pointer-events:none;
+
+z-index:2;
+}
+
+/* =========================
+   DUST PARTICLES
+========================= */
+
+.dust{
+
+position:absolute;
+
+border-radius:50%;
+
+background:
+rgba(255,255,255,0.04);
+
+filter:blur(2px);
+
+z-index:1;
+}
+
+/* PARTICLES */
+
+.dust1{
+
+width:4px;
+height:4px;
+
+top:20%;
+left:10%;
+}
+
+.dust2{
+
+width:6px;
+height:6px;
+
+top:60%;
+left:70%;
+}
+
+.dust3{
+
+width:3px;
+height:3px;
+
+top:40%;
+left:40%;
+}
+
+.dust4{
+
+width:5px;
+height:5px;
+
+top:80%;
+left:20%;
+}
+
+.dust5{
+
+width:4px;
+height:4px;
+
+top:30%;
+left:85%;
+}
+
+/* =========================
+   NOISE OVERLAY
+========================= */
+
+.noise{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+url('https://grainy-gradients.vercel.app/noise.svg');
+
+opacity:0.04;
+
+mix-blend-mode:overlay;
+
+pointer-events:none;
+
+z-index:2;
+}
+
+/* =========================
+   BLINK RED
+========================= */
+
+.blink-red{
+
+color:#ff4747;
+}
+
+/* =========================
+   LIVE TIME
+========================= */
+
+.live-time{
+
+position:absolute;
+
+top:40px;
+right:40px;
+
+color:#77ff77;
+
+letter-spacing:3px;
+
+font-size:0.9rem;
+
+z-index:6;
+
+opacity:0.8;
+}
+
+/* =========================
+   SIGNAL DOTS
+========================= */
+
+.signal{
+
+position:absolute;
+
+width:10px;
+height:10px;
+
+background:#ff2a2a;
+
+border-radius:50%;
+
+box-shadow:
+0 0 10px red,
+0 0 20px red;
+
+z-index:6;
+}
+
+.s1{
+top:30%;
+left:25%;
+}
+
+.s2{
+top:40%;
+right:22%;
+}
+
+.s3{
+bottom:28%;
+left:60%;
+}
