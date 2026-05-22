@@ -336,6 +336,92 @@ font-size:0.7rem;
 font-weight:bold;
 }
 
+ .map-section{
+background:#080808;
+border:1px solid rgba(255,255,255,0.08);
+padding:40px;
+margin-top:30px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+overflow:hidden;
+position:relative;
+}
+
+.map-overlay{
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:400px;
+background:
+radial-gradient(circle at center, rgba(255,0,0,0.08), transparent 70%);
+}
+
+.map-overlay img{
+width:280px;
+opacity:0.9;
+filter:drop-shadow(0 0 20px rgba(255,0,0,0.3));
+}
+
+.ping{
+position:absolute;
+width:20px;
+height:20px;
+background:red;
+border-radius:50%;
+animation:ping 2s infinite;
+}
+
+.ping1{
+top:20%;
+left:30%;
+}
+
+.ping2{
+top:60%;
+left:70%;
+}
+
+.ping3{
+top:40%;
+left:50%;
+}
+
+.ping4{
+top:75%;
+left:20%;
+}
+
+@keyframes ping{
+
+0%{
+transform:scale(1);
+opacity:1;
+}
+
+100%{
+transform:scale(5);
+opacity:0;
+}
+
+}
+
+.map-info p{
+color:#77ff77;
+margin-bottom:18px;
+line-height:1.8;
+}
+
+@media(max-width:900px){
+
+.map-section{
+grid-template-columns:1fr;
+}
+
+}
+
 .log-box{
 background:#060606;
 border:1px solid rgba(0,255,0,0.2);
@@ -421,7 +507,7 @@ letter-spacing:2px;
 opacity:0.7;
 }
 
-.stat-card::before{
+.stat-card::before{https://www.aub.aau.dk/sog
 content:'LIVE';
 position:absolute;
 top:12px;
@@ -744,6 +830,39 @@ SECURE TERMINAL ACCESS
 <p>> CONNECTION UNSTABLE...</p>
 <p>> MEME GRID ACTIVE...</p>
 <p>> AGENT STATUS: UNKNOWN</p>
+</div>
+
+</div>
+
+</section>
+
+ <section class="section">
+
+<h2 class="section-title">
+GLOBAL SURVEILLANCE GRID
+</h2>
+
+<div class="map-section">
+
+<div class="map-overlay">
+
+<div class="ping ping1"></div>
+<div class="ping ping2"></div>
+<div class="ping ping3"></div>
+<div class="ping ping4"></div>
+
+<img src="logo.png">
+
+</div>
+
+<div class="map-info">
+
+<p>> MONITORING GLOBAL MEME ACTIVITY...</p>
+<p>> HIGH VOLATILITY DETECTED</p>
+<p>> SCAM CLUSTERS IDENTIFIED</p>
+<p>> AGENT SIGNALS INTERCEPTED</p>
+<p>> CHAOS LEVELS INCREASING</p>
+
 </div>
 
 </div>
