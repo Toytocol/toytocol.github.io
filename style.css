@@ -1782,3 +1782,92 @@ left:18%;
 bottom:22%;
 right:18%;
 }
+
+.file-card{
+background:
+linear-gradient(
+180deg,
+#98815a,
+#7a6547
+);
+
+padding:25px;
+
+color:black;
+
+border:
+1px solid rgba(0,0,0,0.4);
+
+margin-bottom:25px;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:
+0 0 20px rgba(0,0,0,0.3);
+
+font-family:'Share Tech Mono', monospace;
+}
+
+/* OLD PAPER TEXTURE */
+
+.file-card::before{
+content:'';
+
+position:absolute;
+inset:0;
+
+background-image:
+url('https://www.transparenttextures.com/patterns/old-wall.png');
+
+opacity:0.15;
+
+pointer-events:none;
+}
+
+/* HEADER */
+
+.file-top{
+font-size:0.7rem;
+
+letter-spacing:2px;
+
+margin-bottom:20px;
+
+opacity:0.7;
+}
+
+/* TITLE */
+
+.file-main h3{
+font-size:1.4rem;
+
+line-height:1.4;
+
+margin-bottom:15px;
+}
+
+.file-main span{
+color:#a30000;
+font-weight:bold;
+}
+
+/* DANGER LEVEL */
+
+.danger-level{
+display:flex;
+gap:6px;
+margin-top:20px;
+}
+
+.danger-level div{
+width:18px;
+height:12px;
+
+border:
+1px solid #a30000;
+
+background:
+rgba(163,0,0,0.2);
+}
