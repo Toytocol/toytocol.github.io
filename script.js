@@ -202,3 +202,64 @@ clock.innerHTML =
 }
 
 setInterval(updateClock,1000);
+
+/* =========================
+   LIVE INTEL FEED
+========================= */
+
+const intelFeed =
+document.querySelector(".intel-feed");
+
+const intelLogs = [
+
+"Market volatility increasing.",
+"Signal from unknown node detected.",
+"Timeline corruption event logged.",
+"Unauthorized archive access denied.",
+"Meme integrity failure prevented.",
+"Agent PAW-TIVE location unstable.",
+"Containment field weakening.",
+"9 LIVES protocol preparing.",
+"Global meme anomaly detected."
+
+];
+
+function addIntelLog(){
+
+if(!intelFeed) return;
+
+const item =
+document.createElement("div");
+
+item.classList.add("intel-item");
+
+const time =
+new Date().toLocaleTimeString();
+
+const randomLog =
+intelLogs[
+Math.floor(
+Math.random() * intelLogs.length
+)
+];
+
+item.innerHTML = `
+
+<span>[${time}]</span>
+<p>${randomLog}</p>
+
+`;
+
+intelFeed.appendChild(item);
+
+if(intelFeed.children.length > 8){
+
+intelFeed.removeChild(
+intelFeed.children[1]
+);
+
+}
+
+}
+
+setInterval(addIntelLog, 4000);
