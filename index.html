@@ -1,265 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TOYTOCOL // Meme Preservation Protocol</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOYTOCOL // Meme Preservation Protocol</title>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-    body {
-      background: #050505;
-      color: #e8dcc2;
-      font-family: 'Share Tech Mono', monospace;
-      overflow-x: hidden;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
+<style>
 
-    .noise {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-      opacity: 0.15;
-      pointer-events: none;
-      z-index: 999;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    header {
-      padding: 30px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+body{
+background:#050505;
+color:#e6dcc7;
+font-family:'Share Tech Mono', monospace;
+overflow-x:hidden;
+background-image:
+linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size:40px 40px;
+}
 
-    .logo {
-      font-size: 3rem;
-      font-weight: bold;
-      letter-spacing: 5px;
-    }
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+repeating-linear-gradient(
+to bottom,
+rgba(255,255,255,0.02),
+rgba(255,255,255,0.02) 1px,
+transparent 1px,
+transparent 4px
+);
+pointer-events:none;
+z-index:999;
+opacity:0.3;
+}
 
-    .status {
-      color: #ff3c3c;
-      border: 1px solid #ff3c3c;
-      padding: 10px 16px;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      animation: pulse 2s infinite;
-    }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:30px 7%;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
 
-    @keyframes pulse {
-      0% { opacity: 0.7; }
-      50% { opacity: 1; }
-      100% { opacity: 0.7; }
-    }
+.logo{
+font-size:4rem;
+letter-spacing:6px;
+font-weight:bold;
+}
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      padding: 60px 10%;
-      align-items: center;
-    }
+.protocol{
+border:1px solid red;
+padding:12px 18px;
+color:red;
+font-size:0.9rem;
+animation:pulse 2s infinite;
+}
 
-    .hero img {
-      width: 100%;
-      border: 3px solid rgba(255,255,255,0.15);
-      filter: contrast(1.1);
-      box-shadow: 0 0 40px rgba(255, 60, 60, 0.15);
-    }
+@keyframes pulse{
+0%{opacity:0.6;}
+50%{opacity:1;}
+100%{opacity:0.6;}
+}
 
-    .terminal {
-      background: #090909;
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 30px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.8);
-    }
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+padding:80px 7%;
+align-items:center;
+}
 
-    .terminal p {
-      margin-bottom: 15px;
-      line-height: 1.8;
-      color: #9cff8a;
-    }
+.hero-text h1{
+font-size:1.4rem;
+line-height:1.8;
+margin-bottom:35px;
+max-width:700px;
+}
 
-    .red {
-      color: #ff4747;
-    }
+.terminal{
+background:#090909;
+border:1px solid rgba(255,255,255,0.1);
+padding:30px;
+margin-top:20px;
+box-shadow:0 0 40px rgba(0,255,0,0.06);
+}
 
-    .headline {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
+.terminal p{
+color:#8cff77;
+margin-bottom:15px;
+line-height:1.7;
+}
 
-    .section {
-      padding: 40px 10%;
-    }
+.red{
+color:#ff4d4d;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
+.hero-image{
+position:relative;
+}
 
-    .card {
-      background: #0c0c0c;
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 25px;
-      transition: 0.3s ease;
-    }
+.hero-image img{
+width:100%;
+border:2px solid rgba(255,255,255,0.1);
+filter:contrast(1.1);
+box-shadow:0 0 50px rgba(255,0,0,0.1);
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #ff4747;
-    }
+.warning{
+margin-top:20px;
+border:1px solid red;
+padding:18px;
+color:#ff5050;
+background:rgba(255,0,0,0.05);
+}
 
-    .card h3 {
-      margin-bottom: 15px;
-      color: #ff4747;
-    }
+.section{
+padding:60px 7%;
+}
 
-    .links {
-      display: flex;
-      gap: 20px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
+.section-title{
+font-size:2rem;
+margin-bottom:40px;
+letter-spacing:3px;
+}
 
-    .links a {
-      text-decoration: none;
-      color: #e8dcc2;
-      border: 1px solid rgba(255,255,255,0.2);
-      padding: 14px 20px;
-      transition: 0.3s ease;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
 
-    .links a:hover {
-      background: #ff4747;
-      color: black;
-    }
+.card{
+background:#0b0b0b;
+border:1px solid rgba(255,255,255,0.08);
+padding:25px;
+transition:0.3s;
+position:relative;
+overflow:hidden;
+}
 
-    footer {
-      text-align: center;
-      padding: 40px;
-      opacity: 0.5;
-      font-size: 0.9rem;
-    }
+.card:hover{
+transform:translateY(-5px);
+border-color:red;
+}
 
-    .cursor {
-      display: inline-block;
-      width: 10px;
-      background: #9cff8a;
-      margin-left: 5px;
-      animation: blink 1s infinite;
-    }
+.card h3{
+margin-bottom:15px;
+color:#ff4747;
+}
 
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
+.card p{
+line-height:1.7;
+opacity:0.85;
+}
 
-    @media(max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
+.card::before{
+content:"CLASSIFIED";
+position:absolute;
+top:10px;
+right:-35px;
+background:red;
+color:black;
+padding:4px 40px;
+transform:rotate(35deg);
+font-size:0.7rem;
+font-weight:bold;
+}
 
-      .logo {
-        font-size: 2rem;
-      }
-    }
-  </style>
+.log-box{
+background:#060606;
+border:1px solid rgba(0,255,0,0.2);
+padding:30px;
+margin-top:40px;
+}
+
+.log-box p{
+color:#77ff77;
+margin-bottom:12px;
+}
+
+.buttons{
+display:flex;
+gap:20px;
+margin-top:35px;
+flex-wrap:wrap;
+}
+
+.buttons a{
+text-decoration:none;
+color:#e6dcc7;
+padding:15px 25px;
+border:1px solid rgba(255,255,255,0.15);
+transition:0.3s;
+}
+
+.buttons a:hover{
+background:red;
+color:black;
+}
+
+footer{
+padding:50px;
+text-align:center;
+opacity:0.4;
+font-size:0.9rem;
+}
+
+.cursor{
+display:inline-block;
+width:10px;
+height:18px;
+background:#77ff77;
+margin-left:6px;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+50%{opacity:0;}
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.logo{
+font-size:2.5rem;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <div class="noise"></div>
 
-  <header>
-    <div class="logo">TOYTOCOL</div>
-    <div class="status">PROTOCOL ACTIVE</div>
-  </header>
+<header>
 
-  <section class="hero">
-    <div>
-      <div class="headline">
-        A decentralized feline intelligence operation dedicated to preserving internet chaos, meme integrity, and market volatility.
-      </div>
+<div class="logo">
+TOYTOCOL
+</div>
 
-      <div class="terminal">
-        <p>> ACCESSING ARCHIVE<span class="cursor"></span></p>
-        <p>> CONNECTION ESTABLISHED</p>
-        <p>> PROTOCOL STATUS: <span class="red">ACTIVE</span></p>
-        <p>> ESTABLISHED: 1998</p>
-        <p>> CONTAINMENT BREACH DETECTED: 2016</p>
-        <p>> THE CAT REMAINS AT LARGE</p>
-        <p>> PRESERVE THE CHAOS</p>
-      </div>
+<div class="protocol">
+PROTOCOL ACTIVE
+</div>
 
-      <div class="links">
-        <a href="https://x.com/Toytocol" target="_blank">X / TWITTER</a>
-        <a href="#">TELEGRAM</a>
-        <a href="#">MISSION FILES</a>
-      </div>
-    </div>
+</header>
 
-    <div>
-      <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1200&auto=format&fit=crop" alt="Toytocol Cat" />
-    </div>
-  </section>
+<section class="hero">
 
-  <section class="section">
-    <h2>CLASSIFIED DOSSIER</h2>
+<div class="hero-text">
 
-    <div class="cards">
-      <div class="card">
-        <h3>1998</h3>
-        <p>First traces of the TOYTOCOL detected on underground internet forums and encrypted message boards.</p>
-      </div>
+<h1>
+A decentralized feline intelligence operation dedicated to preserving internet chaos, meme integrity, and market volatility.
+</h1>
 
-      <div class="card">
-        <h3>2016 INCIDENT</h3>
-        <p>A Toyger operative breached containment after accessing restricted meme preservation infrastructure.</p>
-      </div>
+<div class="terminal">
 
-      <div class="card">
-        <h3>MISSION</h3>
-        <p>Protect internet chaos from corporate sterilization, weak memes, and timeline collapse.</p>
-      </div>
-    </div>
-  </section>
+<p>> ACCESSING ARCHIVE<span class="cursor"></span></p>
+<p>> CONNECTION ESTABLISHED</p>
+<p>> MEME GRID ONLINE</p>
+<p>> PROTOCOL STATUS: <span class="red">ACTIVE</span></p>
+<p>> ESTABLISHED: 1998</p>
+<p>> CONTAINMENT BREACH DETECTED: 2016</p>
+<p>> THE CAT REMAINS AT LARGE</p>
+<p>> PRESERVE THE CHAOS</p>
 
-  <section class="section">
-    <h2>KNOWN THREATS</h2>
+</div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>ENGAGEMENT FARMERS</h3>
-        <p>Detected across multiple timelines. Meme corruption levels increasing.</p>
-      </div>
+<div class="buttons">
 
-      <div class="card">
-        <h3>WEAK LIQUIDITY</h3>
-        <p>Protocol instability observed during low-chaos market conditions.</p>
-      </div>
+<a href="https://x.com/Toytocol">X / TWITTER</a>
+<a href="#">TELEGRAM</a>
+<a href="#">MISSION FILES</a>
 
-      <div class="card">
-        <h3>CORPORATE MEMES</h3>
-        <p>Containment measures unsuccessful. The cat continues operations.</p>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <footer>
-    TOYTOCOL // MEME PRESERVATION PROTOCOL // EST. 1998
-  </footer>
+</div>
+
+<div class="hero-image">
+
+<img src="YOUR-IMAGE.png">
+
+<div class="warning">
+⚠ UNAUTHORIZED ACCESS TO TOYTOCOL ARCHIVES IS STRICTLY PROHIBITED
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+CLASSIFIED DOSSIER
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>FILE 001 // PAW-TIVE</h3>
+<p>
+Unidentified Toyger operative responsible for the 2016 containment breach. Current status unknown.
+</p>
+</div>
+
+<div class="card">
+<h3>FILE 002 // MEME ARCHIVE</h3>
+<p>
+Underground meme preservation systems detected across multiple decentralized networks.
+</p>
+</div>
+
+<div class="card">
+<h3>FILE 003 // CONTAINMENT BREACH</h3>
+<p>
+Global volatility spikes detected immediately after protocol activation.
+</p>
+</div>
+
+</div>
+
+<div class="log-box">
+
+<p>[1998] Protocol initialized</p>
+<p>[2004] Meme anomaly detected</p>
+<p>[2016] Containment breach confirmed</p>
+<p>[2026] Agent activity increasing</p>
+<p>[????] Future unknown</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+KNOWN THREATS
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>ENGAGEMENT FARMERS</h3>
+<p>
+Timeline corruption levels increasing globally.
+</p>
+</div>
+
+<div class="card">
+<h3>CORPORATE MEMES</h3>
+<p>
+Protocol integrity threatened by low-quality marketing operations.
+</p>
+</div>
+
+<div class="card">
+<h3>WEAK LIQUIDITY</h3>
+<p>
+Unstable meme environments detected during low-chaos periods.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+TOYTOCOL // MEME PRESERVATION PROTOCOL // EST. 1998
+
+</footer>
+
 </body>
 </html>
