@@ -69,6 +69,30 @@ z-index:99999;
 animation:bootFade 4s forwards;
 }
 
+.scanner-line{
+position:absolute;
+width:100%;
+height:4px;
+background:red;
+top:0;
+left:0;
+box-shadow:0 0 20px red;
+animation:scanMove 4s linear infinite;
+opacity:0.5;
+}
+
+@keyframes scanMove{
+
+0%{
+top:0%;
+}
+
+100%{
+top:100%;
+}
+
+}
+
 .boot-text{
 color:#77ff77;
 font-size:1.2rem;
@@ -364,27 +388,6 @@ background-repeat:no-repeat;
 opacity:0.9;
 }
 
- .scanner-line{
-position:absolute;
-width:100%;
-height:4px;
-background:red;
-top:0;
-left:0;
-box-shadow:0 0 20px red;
-animation:scanMove 4s linear infinite;
-opacity:0.5;
-}
-
-@keyframes scanMove{
-
-0%{
-top:0%;
-}
-
-100%{
-top:100%;
-}
 
 }
 
