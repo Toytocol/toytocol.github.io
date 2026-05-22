@@ -772,6 +772,57 @@ animation:pulse 1.5s infinite;
 letter-spacing:3px;
 }
 
+ .glitch-feed{
+background:#050505;
+border:1px solid rgba(255,0,0,0.2);
+padding:40px;
+margin-top:30px;
+overflow:hidden;
+position:relative;
+}
+
+.glitch-line{
+font-size:1.3rem;
+margin-bottom:20px;
+color:#ff4747;
+position:relative;
+animation:glitchText 2s infinite;
+text-shadow:
+2px 0 red,
+-2px 0 cyan;
+}
+
+@keyframes glitchText{
+
+0%{
+transform:translate(0);
+opacity:1;
+}
+
+20%{
+transform:translate(-2px,2px);
+}
+
+40%{
+transform:translate(2px,-2px);
+}
+
+60%{
+transform:translate(-1px,1px);
+opacity:0.8;
+}
+
+80%{
+transform:translate(1px,-1px);
+}
+
+100%{
+transform:translate(0);
+opacity:1;
+}
+
+}
+
 @keyframes flicker{
 
 0%{
@@ -1170,6 +1221,38 @@ LIVE INTELLIGENCE FEED
 <span>[08:33 UTC]</span>
 <p>TOYTOCOL surveillance grid fully operational.</p>
 </div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+CORRUPTED TRANSMISSIONS
+</h2>
+
+<div class="glitch-feed">
+
+<p class="glitch-line">
+SIGNAL LOST...
+</p>
+
+<p class="glitch-line">
+PAW-TIVE DETECTED...
+</p>
+
+<p class="glitch-line">
+MEME CASCADE EVENT IMMINENT...
+</p>
+
+<p class="glitch-line">
+DO NOT TRUST THE TIMELINE...
+</p>
+
+<p class="glitch-line">
+TUNA RESERVES CRITICAL...
+</p>
 
 </div>
 
