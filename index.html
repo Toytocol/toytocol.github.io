@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOYTOCOL // Meme Preservation Protocol</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #050505;
+      color: #e8dcc2;
+      font-family: 'Share Tech Mono', monospace;
+      overflow-x: hidden;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .noise {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    header {
+      padding: 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 5px;
+    }
+
+    .status {
+      color: #ff3c3c;
+      border: 1px solid #ff3c3c;
+      padding: 10px 16px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.7; }
+      50% { opacity: 1; }
+      100% { opacity: 0.7; }
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 60px 10%;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 100%;
+      border: 3px solid rgba(255,255,255,0.15);
+      filter: contrast(1.1);
+      box-shadow: 0 0 40px rgba(255, 60, 60, 0.15);
+    }
+
+    .terminal {
+      background: #090909;
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 30px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    }
+
+    .terminal p {
+      margin-bottom: 15px;
+      line-height: 1.8;
+      color: #9cff8a;
+    }
+
+    .red {
+      color: #ff4747;
+    }
+
+    .headline {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .section {
+      padding: 40px 10%;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #0c0c0c;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 25px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #ff4747;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #ff4747;
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #e8dcc2;
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 14px 20px;
+      transition: 0.3s ease;
+    }
+
+    .links a:hover {
+      background: #ff4747;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.5;
+      font-size: 0.9rem;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background: #9cff8a;
+      margin-left: 5px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    @media(max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .logo {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header>
+    <div class="logo">TOYTOCOL</div>
+    <div class="status">PROTOCOL ACTIVE</div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="headline">
+        A decentralized feline intelligence operation dedicated to preserving internet chaos, meme integrity, and market volatility.
+      </div>
+
+      <div class="terminal">
+        <p>> ACCESSING ARCHIVE<span class="cursor"></span></p>
+        <p>> CONNECTION ESTABLISHED</p>
+        <p>> PROTOCOL STATUS: <span class="red">ACTIVE</span></p>
+        <p>> ESTABLISHED: 1998</p>
+        <p>> CONTAINMENT BREACH DETECTED: 2016</p>
+        <p>> THE CAT REMAINS AT LARGE</p>
+        <p>> PRESERVE THE CHAOS</p>
+      </div>
+
+      <div class="links">
+        <a href="https://x.com/Toytocol" target="_blank">X / TWITTER</a>
+        <a href="#">TELEGRAM</a>
+        <a href="#">MISSION FILES</a>
+      </div>
+    </div>
+
+    <div>
+      <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1200&auto=format&fit=crop" alt="Toytocol Cat" />
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>CLASSIFIED DOSSIER</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>1998</h3>
+        <p>First traces of the TOYTOCOL detected on underground internet forums and encrypted message boards.</p>
+      </div>
+
+      <div class="card">
+        <h3>2016 INCIDENT</h3>
+        <p>A Toyger operative breached containment after accessing restricted meme preservation infrastructure.</p>
+      </div>
+
+      <div class="card">
+        <h3>MISSION</h3>
+        <p>Protect internet chaos from corporate sterilization, weak memes, and timeline collapse.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>KNOWN THREATS</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>ENGAGEMENT FARMERS</h3>
+        <p>Detected across multiple timelines. Meme corruption levels increasing.</p>
+      </div>
+
+      <div class="card">
+        <h3>WEAK LIQUIDITY</h3>
+        <p>Protocol instability observed during low-chaos market conditions.</p>
+      </div>
+
+      <div class="card">
+        <h3>CORPORATE MEMES</h3>
+        <p>Containment measures unsuccessful. The cat continues operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    TOYTOCOL // MEME PRESERVATION PROTOCOL // EST. 1998
+  </footer>
+</body>
+</html>
