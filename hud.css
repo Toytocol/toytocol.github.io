@@ -1,1 +1,323 @@
 
+/* =========================
+   CONTAINMENT SCREEN
+========================= */
+
+.containment-screen{
+
+position:relative;
+
+height:760px;
+
+background:#040404;
+
+overflow:hidden;
+
+border:
+1px solid rgba(0,255,0,0.12);
+}
+
+/* =========================
+   WORLD MAP
+========================= */
+
+.world-map{
+
+position:absolute;
+inset:0;
+
+background-image:
+
+linear-gradient(
+rgba(0,255,0,0.03),
+rgba(0,255,0,0.03)
+),
+
+url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+opacity:0.22;
+
+filter:
+brightness(0.9)
+contrast(1.4)
+blur(0.5px);
+
+z-index:1;
+}
+
+/* =========================
+   SCAN LINE
+========================= */
+
+.scan-line{
+
+position:absolute;
+
+width:100%;
+height:3px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,0,0,0.9),
+transparent
+);
+
+top:0;
+left:0;
+
+box-shadow:
+0 0 15px red,
+0 0 25px rgba(255,0,0,0.5);
+
+z-index:6;
+
+opacity:0.75;
+}
+
+/* =========================
+   CONTAINMENT TITLE
+========================= */
+
+.containment-title{
+
+position:absolute;
+
+top:40px;
+left:40px;
+
+font-size:2rem;
+
+line-height:1.3;
+
+letter-spacing:4px;
+
+color:#77ff77;
+
+z-index:6;
+
+opacity:0.9;
+}
+
+/* =========================
+   CAT CENTER
+========================= */
+
+.cat-center{
+
+position:absolute;
+
+bottom:0;
+left:50%;
+
+transform:translateX(-50%);
+
+z-index:4;
+}
+
+.cat-center img{
+
+width:340px;
+
+opacity:0.45;
+
+filter:
+brightness(0.35)
+contrast(1.15)
+blur(0.5px)
+drop-shadow(0 0 20px rgba(255,0,0,0.15));
+}
+
+/* =========================
+   THREAT BOX
+========================= */
+
+.threat-box{
+
+position:absolute;
+
+bottom:60px;
+right:40px;
+
+padding:18px 22px;
+
+background:
+rgba(0,0,0,0.75);
+
+border:
+1px solid rgba(255,255,255,0.12);
+
+line-height:1.8;
+
+letter-spacing:2px;
+
+z-index:6;
+}
+
+/* =========================
+   LIVE STATUS
+========================= */
+
+.live-status{
+
+position:absolute;
+
+bottom:60px;
+left:40px;
+
+color:#77ff77;
+
+font-size:1.1rem;
+
+letter-spacing:4px;
+
+z-index:6;
+}
+
+/* =========================
+   RADAR CENTER
+========================= */
+
+.radar-center{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+width:8px;
+height:8px;
+
+background:#ff2a2a;
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+box-shadow:
+0 0 10px red,
+0 0 20px red;
+
+z-index:6;
+}
+
+/* =========================
+   RADAR RINGS
+========================= */
+
+.radar-ring{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+border:
+1px solid rgba(0,255,0,0.08);
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+z-index:2;
+}
+
+.ring1{
+width:180px;
+height:180px;
+}
+
+.ring2{
+width:320px;
+height:320px;
+}
+
+.ring3{
+width:480px;
+height:480px;
+}
+
+/* =========================
+   SIGNAL LINES
+========================= */
+
+.signal-line{
+
+position:absolute;
+
+height:1px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(0,255,0,0.7),
+transparent
+);
+
+opacity:0.3;
+
+z-index:2;
+}
+
+.line1{
+top:25%;
+left:10%;
+width:400px;
+}
+
+.line2{
+top:55%;
+right:15%;
+width:300px;
+}
+
+.line3{
+bottom:25%;
+left:30%;
+width:500px;
+}
+
+/* =========================
+   MICRO DATA
+========================= */
+
+.tiny-data{
+
+position:absolute;
+
+font-size:0.7rem;
+
+letter-spacing:2px;
+
+opacity:0.35;
+
+color:#77ff77;
+
+z-index:3;
+}
+
+.td1{
+top:22%;
+left:18%;
+}
+
+.td2{
+top:40%;
+right:18%;
+}
+
+.td3{
+bottom:18%;
+left:42%;
+}
+
+.td4{
+top:70%;
+right:28%;
+}
