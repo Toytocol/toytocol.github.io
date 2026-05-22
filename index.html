@@ -15,6 +15,42 @@ padding:0;
 box-sizing:border-box;
 }
 
+#boot-screen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+animation:bootFade 4s forwards;
+}
+
+.boot-text{
+color:#77ff77;
+font-size:1.2rem;
+text-align:left;
+line-height:2;
+font-family:'Share Tech Mono', monospace;
+text-shadow:0 0 10px #77ff77;
+}
+
+@keyframes bootFade{
+0%{
+opacity:1;
+}
+85%{
+opacity:1;
+}
+100%{
+opacity:0;
+visibility:hidden;
+}
+}
+
 body{
 background:#050505;
 color:#e6dcc7;
@@ -56,6 +92,35 @@ border-bottom:1px solid rgba(255,255,255,0.08);
 font-size:4rem;
 letter-spacing:6px;
 font-weight:bold;
+position:relative;
+animation:glitch 3s infinite;
+}
+@keyframes glitch{
+
+0%{
+transform:translate(0px);
+}
+
+20%{
+transform:translate(-2px,2px);
+}
+
+40%{
+transform:translate(2px,-2px);
+}
+
+60%{
+transform:translate(-1px,1px);
+}
+
+80%{
+transform:translate(1px,-1px);
+}
+
+100%{
+transform:translate(0px);
+}
+
 }
 
 .protocol{
@@ -122,6 +187,17 @@ border:1px solid red;
 padding:18px;
 color:#ff5050;
 background:rgba(255,0,0,0.05);
+}
+
+.alert-bar{
+background:#220000;
+color:#ff4747;
+padding:12px;
+text-align:center;
+border-top:1px solid red;
+border-bottom:1px solid red;
+letter-spacing:3px;
+animation:pulse 2s infinite;
 }
 
 .section{
@@ -246,8 +322,21 @@ font-size:2.5rem;
 
 <body>
 
-<header>
+<div id="boot-screen">
+<div class="boot-text">
 
+<p>BOOTING TOYTOCOL...</p>
+<p>CONNECTING TO MEME GRID...</p>
+<p>INITIALIZING CHAOS ENGINE...</p>
+<p>ACCESS GRANTED.</p>
+
+</div>
+</div>
+
+<header>
+<div class="alert-bar">
+⚠ GLOBAL MEME INSTABILITY DETECTED ⚠
+</div>
 <div class="logo">
 <img src="logo.png" style="width:120px;">
 </div>
