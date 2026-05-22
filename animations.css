@@ -1,1 +1,344 @@
 
+/* =========================
+   PULSE
+========================= */
+
+@keyframes pulse{
+
+0%{
+opacity:0.5;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0.5;
+}
+
+}
+
+/* =========================
+   MAP PULSE
+========================= */
+
+@keyframes mapPulse{
+
+0%{
+opacity:0.08;
+}
+
+50%{
+opacity:0.16;
+}
+
+100%{
+opacity:0.08;
+}
+
+}
+
+/* =========================
+   SCAN MOVE
+========================= */
+
+@keyframes scanMove{
+
+0%{
+top:0%;
+}
+
+100%{
+top:100%;
+}
+
+}
+
+/* =========================
+   RADAR PULSE
+========================= */
+
+@keyframes radarPulse{
+
+0%{
+
+opacity:0;
+
+transform:
+translate(-50%,-50%)
+scale(0.8);
+
+}
+
+50%{
+opacity:0.2;
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translate(-50%,-50%)
+scale(1.1);
+
+}
+
+}
+
+/* =========================
+   ROTATE RING
+========================= */
+
+@keyframes rotateRing{
+
+from{
+
+transform:
+translate(-50%,-50%)
+rotate(0deg);
+
+}
+
+to{
+
+transform:
+translate(-50%,-50%)
+rotate(360deg);
+
+}
+
+}
+
+/* =========================
+   SIGNAL MOVE
+========================= */
+
+@keyframes signalMove{
+
+0%{
+
+transform:
+translateX(-30px);
+
+opacity:0;
+}
+
+50%{
+opacity:0.4;
+}
+
+100%{
+
+transform:
+translateX(30px);
+
+opacity:0;
+}
+
+}
+
+/* =========================
+   SCREEN FLICKER
+========================= */
+
+@keyframes screenFlicker{
+
+0%{
+opacity:1;
+}
+
+97%{
+opacity:1;
+}
+
+98%{
+opacity:0.96;
+}
+
+99%{
+opacity:0.92;
+}
+
+100%{
+opacity:1;
+}
+
+}
+
+/* =========================
+   WARNING PULSE
+========================= */
+
+@keyframes warningPulse{
+
+0%{
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+/* =========================
+   FLOAT DUST
+========================= */
+
+@keyframes floatDust{
+
+0%{
+
+transform:
+translateY(0px)
+translateX(0px);
+
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+80%{
+opacity:1;
+}
+
+100%{
+
+transform:
+translateY(-80px)
+translateX(20px);
+
+opacity:0;
+}
+
+}
+
+/* =========================
+   FLICKER TEXT
+========================= */
+
+@keyframes flickerText{
+
+0%{
+opacity:1;
+}
+
+50%{
+opacity:0.92;
+}
+
+52%{
+opacity:0.6;
+}
+
+54%{
+opacity:1;
+}
+
+100%{
+opacity:1;
+}
+
+}
+
+/* =========================
+   DANGER BLINK
+========================= */
+
+@keyframes dangerBlink{
+
+0%{
+opacity:1;
+}
+
+50%{
+opacity:0.3;
+color:#ff4747;
+}
+
+100%{
+opacity:1;
+}
+
+}
+
+/* =========================
+   INTEL APPEAR
+========================= */
+
+@keyframes intelAppear{
+
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* =========================
+   BAR PULSE
+========================= */
+
+@keyframes barPulse{
+
+from{
+opacity:0.3;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+/* =========================
+   WAVE MOVE
+========================= */
+
+@keyframes waveMove{
+
+from{
+transform:translateX(-10px);
+}
+
+to{
+transform:translateX(10px);
+}
+
+}
+
+/* =========================
+   RETICLE PULSE
+========================= */
+
+@keyframes reticlePulse{
+
+0%{
+opacity:0.2;
+transform:scale(1);
+}
+
+50%{
+opacity:0.8;
+transform:scale(1.05);
+}
+
+100%{
+opacity:0.2;
+transform:scale(1);
+}
+
+}
