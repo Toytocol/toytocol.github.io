@@ -1033,3 +1033,57 @@ opacity:0;
 }
 
 }
+
+/* =========================
+   LIVE INTEL FEED
+========================= */
+
+.intel-feed{
+margin-top:25px;
+border:1px solid rgba(0,255,0,0.12);
+background:#050505;
+padding:20px;
+overflow:hidden;
+position:relative;
+}
+
+.intel-header{
+color:#ff4747;
+margin-bottom:20px;
+letter-spacing:3px;
+font-size:0.9rem;
+}
+
+.intel-item{
+display:flex;
+gap:20px;
+padding:12px 0;
+border-bottom:1px solid rgba(255,255,255,0.05);
+font-size:0.85rem;
+animation:intelAppear 0.5s ease;
+}
+
+.intel-item span{
+color:#77ff77;
+min-width:90px;
+}
+
+.intel-item p{
+opacity:0.8;
+}
+
+@keyframes intelAppear{
+
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
