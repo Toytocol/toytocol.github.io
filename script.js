@@ -301,13 +301,26 @@ document.body.classList.add(
 "panic-mode"
 );
 
+const popup =
+document.getElementById(
+"signal-popup"
+);
+
+popup.classList.add(
+"show"
+);
+
 setTimeout(()=>{
 
 document.body.classList.remove(
 "panic-mode"
 );
 
-},2000);
+popup.classList.remove(
+"show"
+);
+
+},3000);
 
 }
 
@@ -334,10 +347,10 @@ commandDatabase[value];
 
 if(value==="life_09"){
 
-const archive =
-document.getElementById(
-"hidden-archive"
-);
+window.location.href=
+"archive.html";
+
+}
 
 if(archive){
 
