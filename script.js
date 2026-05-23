@@ -263,3 +263,70 @@ intelFeed.children[1]
 }
 
 setInterval(addIntelLog, 4000);
+
+
+/* =========================
+   SECRET TERMINAL SYSTEM
+========================= */
+
+const commandInput =
+document.getElementById("command-input");
+
+const terminalResponse =
+document.getElementById("terminal-response");
+
+const commandDatabase = {
+
+"paw-tive":
+"SIGNAL DETECTED // LAST KNOWN LOCATION UNKNOWN",
+
+"life_09":
+"ACCESS RESTRICTED // FINAL LIFE PROTOCOL LOCKED",
+
+"2016":
+"CONTAINMENT BREACH ARCHIVE CORRUPTED",
+
+"toytocol":
+"MEME PRESERVATION PROTOCOL ACTIVE",
+
+"agent":
+"ACTIVE AGENTS ONLINE: 847",
+
+"archive":
+"ARCHIVE LINK UNSTABLE"
+
+};
+
+if(commandInput){
+
+commandInput.addEventListener(
+"keydown",
+
+function(event){
+
+if(event.key === "Enter"){
+
+const value =
+commandInput.value
+.toLowerCase()
+.trim();
+
+if(commandDatabase[value]){
+
+terminalResponse.innerHTML =
+commandDatabase[value];
+
+}else{
+
+terminalResponse.innerHTML =
+"UNKNOWN COMMAND";
+
+}
+
+commandInput.value = "";
+
+}
+
+});
+
+}
