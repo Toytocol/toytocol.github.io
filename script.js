@@ -674,3 +674,170 @@ randomAlert,
 );
 
 
+/* =========================
+   STATUS SYSTEM
+========================= */
+
+const systemStatus=
+document.getElementById(
+"systemStatus"
+);
+
+const protocolStatus=
+document.getElementById(
+"protocolStatus"
+);
+
+const threatStatus=
+document.getElementById(
+"threatStatus"
+);
+
+const systemMessages=[
+
+"> SYSTEM ONLINE",
+"> SYSTEM SYNCING",
+"> NODE STABLE",
+"> SIGNAL VERIFIED"
+
+];
+
+const protocolMessages=[
+
+"> PROTOCOL ACTIVE",
+"> PROTOCOL MONITORING",
+"> ARCHIVE LINKED",
+"> MEME ENGINE ACTIVE"
+
+];
+
+const threatMessages=[
+
+"> THREAT DETECTED",
+"> THREAT LOW",
+"> THREAT ESCALATING",
+"> THREAT CONTAINED"
+
+];
+
+function randomItem(array){
+
+return array[
+Math.floor(
+Math.random()
+*
+array.length
+)
+];
+
+}
+
+function updateStatus(){
+
+if(systemStatus){
+
+systemStatus.innerHTML=
+
+randomItem(
+systemMessages
+);
+
+}
+
+if(protocolStatus){
+
+protocolStatus.innerHTML=
+
+randomItem(
+protocolMessages
+);
+
+}
+
+if(threatStatus){
+
+threatStatus.innerHTML=
+
+randomItem(
+threatMessages
+);
+
+}
+
+}
+
+setInterval(
+updateStatus,
+8000
+);
+
+updateStatus();
+
+/* =========================
+   INTERFACE FEEDBACK
+========================= */
+
+const buttons=
+
+document.querySelectorAll(
+"button"
+);
+
+buttons.forEach(button=>{
+
+button.addEventListener(
+
+"click",
+
+()=>{
+
+button.classList.add(
+"button-active"
+);
+
+setTimeout(()=>{
+
+button.classList.remove(
+"button-active"
+);
+
+},150);
+
+}
+
+);
+
+});
+
+
+const terminal=
+
+document.querySelector(
+".secret-terminal"
+);
+
+function flashTerminal(){
+
+if(terminal){
+
+terminal.classList.add(
+"terminal-flash"
+);
+
+setTimeout(()=>{
+
+terminal.classList.remove(
+"terminal-flash"
+);
+
+},300);
+
+}
+
+}
+
+setInterval(
+flashTerminal,
+12000
+);
+
