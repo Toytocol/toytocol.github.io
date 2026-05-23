@@ -433,4 +433,32 @@ terminalResponse.innerHTML=
 
 );
 
+/* =========================
+   BOOT SCREEN
+========================= */
+
+window.addEventListener(
+"load",
+
+()=>{
+
+setTimeout(()=>{
+
+const boot=
+document.getElementById(
+"boot-screen"
+);
+
+boot.style.opacity="0";
+
+setTimeout(()=>{
+
+boot.style.display="none";
+
+},1000);
+
+},3000);
+
+});
+
 }
