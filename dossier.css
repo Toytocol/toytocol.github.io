@@ -243,3 +243,16 @@ color:#77ff77;
 line-height:2;
 font-size:0.8rem;
 }
+
+
+.file-card:hover{
+
+transform:
+translateY(-6px)
+scale(1.03);
+
+border-color:#ff4444;
+
+cursor:pointer;
+
+}
