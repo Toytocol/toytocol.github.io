@@ -886,3 +886,132 @@ triggerPing,
 9000
 );
 
+/* =========================
+   SIGNAL LOCATIONS
+========================= */
+
+const signalLabel=
+
+document.getElementById(
+"signal-label"
+);
+
+const locations=[
+
+"COPENHAGEN",
+"TOKYO",
+"NEW YORK",
+"SINGAPORE",
+"BERLIN",
+"SEOUL",
+"UNKNOWN NODE",
+"MEME CLUSTER"
+
+];
+
+function randomSignal(){
+
+if(
+!signalLabel||
+!ping
+)return;
+
+const x=
+Math.random()*70+10;
+
+const y=
+Math.random()*60+10;
+
+const place=
+
+locations[
+Math.floor(
+Math.random()*
+locations.length
+)
+];
+
+signalLabel.innerHTML=
+
+place+
+"<br>SIGNAL DETECTED";
+
+signalLabel.style.left=
+x+"%";
+
+signalLabel.style.top=
+y+"%";
+
+signalLabel.classList.add(
+"show"
+);
+
+setTimeout(()=>{
+
+signalLabel.classList.remove(
+"show"
+);
+
+},3000);
+
+}
+
+setInterval(
+randomSignal,
+12000);
+
+/* =========================
+   BOOT TERMINAL SYSTEM
+========================= */
+
+const bootTerminal=
+
+document.getElementById(
+"boot-terminal"
+);
+
+const bootLines=[
+
+"> BOOTING PROTOCOL...",
+
+"> CONNECTING TO MEME GRID...",
+
+"> VERIFYING CHAOS ENGINE...",
+
+"> LOADING AGENT DATABASE...",
+
+"> SIGNALS SYNCHRONIZED...",
+
+"> ACCESS GRANTED"
+
+];
+
+function runBoot(){
+
+if(!bootTerminal)
+return;
+
+bootTerminal.innerHTML="";
+
+bootLines.forEach(
+
+(line,index)=>{
+
+setTimeout(()=>{
+
+bootTerminal.innerHTML+=
+
+`<p>${line}</p>`;
+
+},index*700);
+
+}
+
+);
+
+}
+
+runBoot();
+
+
+   
