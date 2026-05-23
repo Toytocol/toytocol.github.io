@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-TOYTOCOL // Meme Preservation Protocol
-</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="hud.css">
-<link rel="stylesheet" href="effects.css">
-<link rel="stylesheet" href="dossier.css">
-<link rel="stylesheet" href="animations.css">
-
-</head>
-
 <body>
+
+<!-- =========================
+     CRT OVERLAY
+========================= -->
+
+<div class="crt"></div>
+
+
+<!-- =========================
+     BOOT SYSTEM
+========================= -->
 
 <div id="boot-screen">
 
@@ -34,63 +24,17 @@ TOYTOCOL BIOS v1.998
 <p>> BOOTING PROTOCOL...</p>
 <p>> CONNECTING TO MEME GRID...</p>
 <p>> VERIFYING CHAOS ENGINE...</p>
-<p>> LOADING AGENT DATABASE...</p>
 <p>> ACCESS GRANTED</p>
 
 </div>
 
 <div class="loading-bar">
-
 <div class="loading-fill"></div>
-
-</div>
-
-<p class="boot-warning">
-WARNING: UNAUTHORIZED ACCESS MAY RESULT IN TIMELINE INSTABILITY
-</p>
-
 </div>
 
 </div>
 
-<!-- =========================
-     CRT OVERLAY
-========================= -->
-
-<div class="crt"></div>
-
-<!-- =========================
-     BOOT SCREEN
-========================= -->
-
-<div id="boot-screen">
-
-<div class="boot-text">
-
-<p>BOOTING TOYTOCOL...</p>
-<p>CONNECTING TO MEME GRID...</p>
-<p>INITIALIZING CHAOS ENGINE...</p>
-<p>ACCESS GRANTED.</p>
-
 </div>
-
-</div>
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-<div class="logo">
-<img src="logo.png">
-</div>
-
-<div class="protocol">
-PROTOCOL ACTIVE
-</div>
-
-</header>
 
 
 <!-- =========================
@@ -98,18 +42,21 @@ PROTOCOL ACTIVE
 ========================= -->
 
 <div class="alert-bar">
+
 ⚠ GLOBAL MEME INSTABILITY DETECTED ⚠
+
 </div>
 
+
 <!-- =========================
-     HERO
+     MAIN DASHBOARD
 ========================= -->
 
 <section class="dashboard">
 
-<!-- LEFT PANEL -->
+<!-- LEFT SIDEBAR -->
 
-<div class="panel left-panel">
+<div class="panel sidebar">
 
 <h2 class="glitch" data-text="TOYTOCOL">
 TOYTOCOL
@@ -126,7 +73,6 @@ MEME PRESERVATION PROTOCOL
 <p>> SYSTEM ONLINE</p>
 <p>> PROTOCOL ACTIVE</p>
 <p>> THREAT DETECTED</p>
-<p>> CONTAINMENT BREACHED</p>
 
 </div>
 
@@ -144,7 +90,6 @@ TERMINAL ACCESS
 </div>
 
 <input
-type="text"
 id="command-input"
 placeholder="ENTER COMMAND..."
 autocomplete="off"
@@ -156,54 +101,49 @@ AWAITING INPUT...
 
 </div>
 
+<div id="hidden-archive" class="hidden-archive">
+
+<div class="archive-title">
+CLASSIFIED ARCHIVE UNLOCKED
 </div>
 
-<!-- CENTER PANEL -->
+<div class="archive-content">
+
+<p>FILE: LIFE_09</p>
+<p>STATUS: LOCKED</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CENTER SCREEN -->
 
 <div class="panel center-panel">
 
 <h2 class="panel-title">
+
 GLOBAL MEME SURVEILLANCE
+
 </h2>
 
 <div class="containment-screen">
-<div class="intel-feed">
 
-<div class="intel-item">
-<span>[03:14 UTC]</span>
-<p>Unusual meme volatility detected.</p>
-</div>
+<div class="world-map"></div>
 
-<div class="intel-item">
-<span>[04:02 UTC]</span>
-<p>Unauthorized tuna transfer intercepted.</p>
-</div>
+<div class="scan-line"></div>
 
-<div class="intel-item">
-<span>[05:47 UTC]</span>
-<p>Signal believed to originate from Agent PAW-TIVE.</p>
-</div>
-
-</div>
 <div class="vignette"></div>
-<div class="scanlines"></div>
-<div class="live-time" id="live-time"></div>
-<div class="warning-overlay"></div>
-<div class="dust dust1"></div>
-<div class="dust dust2"></div>
-<div class="dust dust3"></div>
-<div class="dust dust4"></div>
-<div class="dust dust5"></div>
 
-<div class="signal s1"></div>
-<div class="signal s2"></div>
-<div class="signal s3"></div>
-<div class="signal-line line1"></div>
-<div class="signal-line line2"></div>
-<div class="signal-line line3"></div>
-<div class="signal-line line1"></div>
-<div class="signal-line line2"></div>
-<div class="signal-line line3"></div>
+<div class="warning-overlay"></div>
+
+<div class="scanlines"></div>
+
+<div class="noise"></div>
+
+<div class="live-time" id="live-time"></div>
 
 <div class="radar-ring ring1"></div>
 <div class="radar-ring ring2"></div>
@@ -211,81 +151,50 @@ GLOBAL MEME SURVEILLANCE
 
 <div class="radar-center"></div>
 
-<div class="tiny-data td1">
-NODE_77 ACTIVE
-</div>
-
-<div class="tiny-data td2">
-VOLATILITY SPIKE
-</div>
-
-<div class="tiny-data td3">
-SIGNAL INTERCEPTED
-</div>
-
-<div class="tiny-data td4">
-ARCHIVE LINK STABLE
-</div>
-
-<div class="world-map"></div>
-
-<div class="scan-line"></div>
-
-
 <div class="cat-center">
+
 <img src="agent.png">
-</div>
 
-<div class="target-ring"></div>
-
-<div class="reticle r1"></div>
-<div class="reticle r2"></div>
-
-<div class="sector-box s1">
-SECTOR 07
-</div>
-
-<div class="sector-box s2">
-ZONE UNSTABLE
 </div>
 
 <div class="containment-title">
-<span class="blink-red">DETECTED</span>
+
+CONTAINMENT BREACH
+
 </div>
 
 <div class="threat-box">
+
 THREAT LEVEL:
 UNSTABLE
-</div>
 
-<div class="coord-box">
-SIGNAL ORIGIN:
-UNKNOWN
 </div>
 
 <div class="live-status">
+
 ACTIVE LIFE:
 07 / 09
-</div>
 
 </div>
 
 </div>
 
-<!-- RIGHT PANEL -->
+</div>
+
+
+<!-- RIGHT DOSSIERS -->
+
+<div class="panel dossier-panel">
 
 <div class="file-card">
 
 <div class="file-top">
-// FILE: 001
+// FILE 001
 </div>
 
 <div class="file-main">
 
-<h3>
-TARGET
-PAW-TIVE
-</h3>
+<h3>PAW-TIVE</h3>
 
 <p>
 STATUS:
@@ -294,32 +203,18 @@ STATUS:
 
 </div>
 
-<div class="danger-level">
-
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-
 </div>
 
-</div>
-
-<!-- FILE 2 -->
 
 <div class="file-card">
 
 <div class="file-top">
-// FILE: 002
+// FILE 002
 </div>
 
 <div class="file-main">
 
-<h3>
-MEME
-ARCHIVE
-</h3>
+<h3>MEME ARCHIVE</h3>
 
 <p>
 CLASSIFICATION:
@@ -330,20 +225,16 @@ CLASSIFICATION:
 
 </div>
 
-<!-- FILE 3 -->
 
 <div class="file-card">
 
 <div class="file-top">
-// FILE: 003
+// FILE 003
 </div>
 
 <div class="file-main">
 
-<h3>
-CONTAINMENT
-BREACH
-</h3>
+<h3>CONTAINMENT BREACH</h3>
 
 <p>
 DATE:
@@ -354,167 +245,10 @@ DATE:
 
 </div>
 
-<!-- =========================
-     CLASSIFIED DOSSIER
-========================= -->
-
-<section class="section">
-
-<h2 class="section-title">
-CLASSIFIED DOSSIER
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>FILE 001 // PAW-TIVE</h3>
-
-<p>
-Unidentified Toyger operative responsible for the 2016 containment breach.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>FILE 002 // MEME ARCHIVE</h3>
-
-<p>
-Underground meme preservation systems detected across decentralized networks.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>FILE 003 // CONTAINMENT BREACH</h3>
-
-<p>
-Global volatility spikes detected immediately after protocol activation.
-</p>
-
-</div>
-
 </div>
 
 </section>
-
-<!-- =========================
-     SURVEILLANCE GRID
-========================= -->
-
-<section class="section">
-
-<h2 class="section-title">
-GLOBAL SURVEILLANCE GRID
-</h2>
-
-<div class="map-section">
-
-<div class="map-overlay">
-
-<div class="scanner-line"></div>
-
-<div class="ping ping1"></div>
-<div class="ping ping2"></div>
-<div class="ping ping3"></div>
-<div class="ping ping4"></div>
-
-<img src="logo.png">
-
-</div>
-<div class="map-stats">
-
-<p>ACTIVE AGENTS: 847</p>
-<p>THREAT LEVEL: SEVERE</p>
-<p>MEME STABILITY: 12%</p>
-
-</div>
-
-<div class="map-info">
-
-<p>> MONITORING GLOBAL MEME ACTIVITY...</p>
-<p>> HIGH VOLATILITY DETECTED</p>
-<p>> SCAM CLUSTERS IDENTIFIED</p>
-<p>> AGENT SIGNALS INTERCEPTED</p>
-<p>> CHAOS LEVELS INCREASING</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     LIVE FEED
-========================= -->
-
-<section class="section">
-
-<h2 class="section-title">
-LIVE INTELLIGENCE FEED
-</h2>
-
-<div class="intel-feed">
-
-<div class="intel-item">
-<span>[03:14 UTC]</span>
-<p>Unusual meme volatility detected.</p>
-</div>
-
-<div class="intel-item">
-<span>[04:02 UTC]</span>
-<p>Unauthorized tuna transfer intercepted.</p>
-</div>
-
-<div class="intel-item">
-<span>[05:47 UTC]</span>
-<p>Signal believed to originate from Agent PAW-TIVE.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     MARKET GRID
-========================= -->
-
-<section class="section">
-
-<h2 class="section-title">
-LIVE MEME VOLATILITY GRID
-</h2>
-
-<div class="dex-box">
-
-<iframe
-src="https://dexscreener.com/solana?embed=1&theme=dark"
-width="100%"
-height="600"
-style="border:none;">
-</iframe>
-
-</div>
-
-</section>
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-TOYTOCOL // MEME PRESERVATION PROTOCOL // EST. 1998
-
-</footer>
-
-<!-- =========================
-     SCRIPT
-========================= -->
 
 <script src="script.js"></script>
 
 </body>
-</html>
