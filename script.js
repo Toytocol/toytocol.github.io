@@ -158,7 +158,7 @@ feed.removeChild(feed.lastChild);
 
 }
 
-}
+
 
 setInterval(addIntelMessage, 7000);
 
@@ -358,8 +358,6 @@ popup.classList.remove(
 },3000);
 
 }
-
-};
 
 if(commandInput){
 
