@@ -612,9 +612,23 @@ const terminalMessages=[
 
 ];
 
-const terminalResponse =
+/* =========================
+   GLOBAL ELEMENTS
+========================= */
+
+const terminalResponse=
 document.getElementById(
 "terminal-response"
+);
+
+const commandInput=
+document.getElementById(
+"command-input"
+);
+
+const alertBar=
+document.querySelector(
+".alert-bar"
 );
 
 function intelligenceEvent(){
@@ -880,10 +894,9 @@ flashTerminal,
 ========================= */
 
 const ping=
-
 document.getElementById(
 "activity-ping"
-);
+)||null;
 
 function triggerPing(){
 
@@ -925,10 +938,9 @@ triggerPing,
 ========================= */
 
 const signalLabel=
-
 document.getElementById(
 "signal-label"
-);
+)||null;
 
 const locations=[
 
