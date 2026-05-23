@@ -1,3 +1,68 @@
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+TOYTOCOL // MEME PRESERVATION PROTOCOL
+</title>
+
+
+<!-- =========================
+     GOOGLE FONT
+========================= -->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+rel="stylesheet">
+
+
+<!-- =========================
+     CSS FILES
+========================= -->
+
+<link
+rel="stylesheet"
+href="style.css">
+
+<link
+rel="stylesheet"
+href="hud.css">
+
+<link
+rel="stylesheet"
+href="effects.css">
+
+<link
+rel="stylesheet"
+href="animations.css">
+
+<link
+rel="stylesheet"
+href="dossier.css">
+
+
+<!-- =========================
+     WEBSITE ICON
+========================= -->
+
+<link
+rel="icon"
+type="image/png"
+href="logo.png">
+
+</head>
 <body>
 
 <!-- =========================
@@ -8,31 +73,31 @@
 
 
 <!-- =========================
-     BOOT SYSTEM
+     BOOT SCREEN
 ========================= -->
 
 <div id="boot-screen">
 
-<div class="boot-container">
+    <div class="boot-container">
 
-<h1 class="boot-logo">
-TOYTOCOL BIOS v1.998
-</h1>
+        <h1 class="boot-logo">
+            TOYTOCOL BIOS v1.998
+        </h1>
 
-<div class="boot-terminal">
+        <div class="boot-terminal">
 
-<p>> BOOTING PROTOCOL...</p>
-<p>> CONNECTING TO MEME GRID...</p>
-<p>> VERIFYING CHAOS ENGINE...</p>
-<p>> ACCESS GRANTED</p>
+            <p>> BOOTING PROTOCOL...</p>
+            <p>> CONNECTING TO MEME GRID...</p>
+            <p>> VERIFYING CHAOS ENGINE...</p>
+            <p>> ACCESS GRANTED</p>
 
-</div>
+        </div>
 
-<div class="loading-bar">
-<div class="loading-fill"></div>
-</div>
+        <div class="loading-bar">
+            <div class="loading-fill"></div>
+        </div>
 
-</div>
+    </div>
 
 </div>
 
@@ -43,7 +108,7 @@ TOYTOCOL BIOS v1.998
 
 <div class="alert-bar">
 
-⚠ GLOBAL MEME INSTABILITY DETECTED ⚠
+    ⚠ GLOBAL MEME INSTABILITY DETECTED ⚠
 
 </div>
 
@@ -54,220 +119,303 @@ TOYTOCOL BIOS v1.998
 
 <section class="dashboard">
 
-<!-- LEFT SIDEBAR -->
+    <!-- =========================
+         LEFT SIDEBAR
+    ========================= -->
 
-<div class="panel sidebar">
+    <aside class="panel sidebar">
 
-<h2 class="glitch" data-text="TOYTOCOL">
-TOYTOCOL
-</h2>
+        <h2 class="glitch" data-text="TOYTOCOL">
 
-<p class="sub">
-MEME PRESERVATION PROTOCOL
-</p>
+            TOYTOCOL
 
-<img src="logo.png" class="main-logo">
+        </h2>
 
-<div class="status-box">
+        <p class="sub">
 
-<p>> SYSTEM ONLINE</p>
-<p>> PROTOCOL ACTIVE</p>
-<p>> THREAT DETECTED</p>
+            MEME PRESERVATION PROTOCOL
 
-</div>
+        </p>
 
-<div class="small-buttons">
+        <div class="logo">
 
-<button id="archiveBtn">
-ACCESS ARCHIVE
-</button>
+            <img
+                src="logo.png"
+                class="main-logo"
+                alt="TOYTOCOL logo"
+            >
 
-<button id="fileBtn">
-VIEW FILE
-</button>
+        </div>
 
-</div>
+        <div class="status-box">
 
-<div class="secret-terminal">
+            <p>> SYSTEM ONLINE</p>
+            <p>> PROTOCOL ACTIVE</p>
+            <p>> THREAT DETECTED</p>
 
-<div class="secret-header">
-TERMINAL ACCESS
-</div>
+        </div>
 
-<input
-id="command-input"
-placeholder="ENTER COMMAND..."
-autocomplete="off"
->
+        <!-- BUTTONS -->
 
-<div id="terminal-response">
-AWAITING INPUT...
-</div>
+        <div class="small-buttons">
 
-</div>
+            <button
+                id="archiveBtn"
+                class="control-btn">
 
-<div id="hidden-archive" class="hidden-archive">
+                ACCESS ARCHIVE
 
-<div class="archive-title">
-CLASSIFIED ARCHIVE UNLOCKED
-</div>
+            </button>
 
-<div class="archive-content">
+            <button
+                id="fileBtn"
+                class="control-btn">
 
-<p>FILE: LIFE_09</p>
-<p>STATUS: LOCKED</p>
+                VIEW FILE
 
-</div>
+            </button>
 
-</div>
+        </div>
 
-</div>
+        <!-- SECRET TERMINAL -->
 
+        <div class="secret-terminal">
 
-<!-- CENTER SCREEN -->
+            <div class="secret-header">
 
-<div class="panel center-panel">
+                TERMINAL ACCESS
 
-<h2 class="panel-title">
+            </div>
 
-GLOBAL MEME SURVEILLANCE
+            <input
+                id="command-input"
+                placeholder="ENTER COMMAND..."
+                autocomplete="off"
+            >
 
-</h2>
+            <div id="terminal-response">
 
-<div class="containment-screen">
+                AWAITING INPUT...
 
-<div class="world-map"></div>
+            </div>
 
-<div class="scan-line"></div>
+        </div>
 
-<div class="vignette"></div>
+        <!-- HIDDEN ARCHIVE -->
 
-<div class="warning-overlay"></div>
+        <div
+            id="hidden-archive"
+            class="hidden-archive">
 
-<div class="scanlines"></div>
+            <div class="archive-title">
 
-<div class="noise"></div>
+                CLASSIFIED ARCHIVE UNLOCKED
 
-<div class="live-time" id="live-time"></div>
+            </div>
 
-<div class="radar-ring ring1"></div>
-<div class="radar-ring ring2"></div>
-<div class="radar-ring ring3"></div>
+            <div class="archive-content">
 
-<div class="radar-center"></div>
+                <p>FILE: LIFE_09</p>
+                <p>STATUS: LOCKED</p>
 
-<div class="cat-center">
+            </div>
 
-<img src="agent.png">
+        </div>
 
-</div>
+    </aside>
 
-<div class="containment-title">
 
-CONTAINMENT BREACH
 
-</div>
+    <!-- =========================
+         CENTER SCREEN
+    ========================= -->
 
-<div class="threat-box">
+    <main class="panel center-panel">
 
-THREAT LEVEL:
-UNSTABLE
+        <h2 class="panel-title">
 
-</div>
+            GLOBAL MEME SURVEILLANCE
 
-<div class="live-status">
+        </h2>
 
-ACTIVE LIFE:
-07 / 09
+        <div class="containment-screen">
 
-</div>
+            <!-- BACKGROUND EFFECTS -->
 
-</div>
+            <div class="world-map"></div>
 
-</div>
+            <div class="scan-line"></div>
 
+            <div class="scanlines"></div>
 
-<!-- RIGHT DOSSIERS -->
+            <div class="noise"></div>
 
-<div class="panel dossier-panel">
+            <div class="vignette"></div>
 
-<div class="file-card">
+            <div class="warning-overlay"></div>
 
-<div class="file-top">
-// FILE 001
-</div>
+            <!-- HUD -->
 
-<div class="file-main">
+            <div
+                class="live-time"
+                id="live-time">
+            </div>
 
-<h3>PAW-TIVE</h3>
+            <div class="radar-ring ring1"></div>
+            <div class="radar-ring ring2"></div>
+            <div class="radar-ring ring3"></div>
 
-<p>
-STATUS:
-<span>AT LARGE</span>
-</p>
+            <div class="radar-center"></div>
 
-</div>
+            <!-- AGENT -->
 
-</div>
+            <div class="cat-center">
 
+                <img
+                    src="agent.png"
+                    alt="Agent Paw-Tive"
+                >
 
-<div class="file-card">
+            </div>
 
-<div class="file-top">
-// FILE 002
-</div>
+            <!-- TEXT -->
 
-<div class="file-main">
+            <div class="containment-title">
 
-<h3>MEME ARCHIVE</h3>
+                CONTAINMENT BREACH
 
-<p>
-CLASSIFICATION:
-<span>TOP SECRET</span>
-</p>
+            </div>
 
-</div>
+            <div class="threat-box">
 
-</div>
+                THREAT LEVEL:
+                UNSTABLE
 
+            </div>
 
-<div class="file-card">
+            <div class="live-status">
 
-<div class="file-top">
-// FILE 003
-</div>
+                ACTIVE LIFE:
+                07 / 09
 
-<div class="file-main">
+            </div>
 
-<h3>CONTAINMENT BREACH</h3>
+        </div>
 
-<p>
-DATE:
-<span>2016</span>
-</p>
+    </main>
 
-</div>
 
-</div>
 
-</div>
+    <!-- =========================
+         DOSSIER PANEL
+    ========================= -->
+
+    <aside class="panel dossier-panel">
+
+        <div class="file-card">
+
+            <div class="file-top">
+
+                // FILE 001
+
+            </div>
+
+            <div class="file-main">
+
+                <h3>PAW-TIVE</h3>
+
+                <p>
+
+                    STATUS:
+                    <span>AT LARGE</span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="file-card">
+
+            <div class="file-top">
+
+                // FILE 002
+
+            </div>
+
+            <div class="file-main">
+
+                <h3>MEME ARCHIVE</h3>
+
+                <p>
+
+                    CLASSIFICATION:
+                    <span>TOP SECRET</span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="file-card">
+
+            <div class="file-top">
+
+                // FILE 003
+
+            </div>
+
+            <div class="file-main">
+
+                <h3>CONTAINMENT BREACH</h3>
+
+                <p>
+
+                    DATE:
+                    <span>2016</span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </aside>
 
 </section>
-<div id="signal-popup" class="signal-popup">
 
-<div class="popup-title">
 
-SIGNAL INTERCEPTED
+
+<!-- =========================
+     SIGNAL POPUP
+========================= -->
+
+<div
+id="signal-popup"
+class="signal-popup">
+
+    <div class="popup-title">
+
+        SIGNAL INTERCEPTED
+
+    </div>
+
+    <div class="popup-content">
+
+        UNKNOWN AGENT ACTIVITY DETECTED
+
+    </div>
 
 </div>
 
-<div class="popup-content">
 
-UNKNOWN AGENT ACTIVITY DETECTED
 
-</div>
-
-</div>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script src="script.js"></script>
 
