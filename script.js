@@ -265,6 +265,42 @@ intelFeed.children[1]
 setInterval(addIntelLog, 4000);
 
 
+
+
+
+/* =========================
+   TERMINAL TYPE EFFECT
+========================= */
+
+function typeMessage(text){
+
+if(!terminalResponse)
+return;
+
+terminalResponse.innerHTML="";
+
+let i=0;
+
+const typing=
+
+setInterval(()=>{
+
+terminalResponse.innerHTML+=
+text.charAt(i);
+
+i++;
+
+if(i>=text.length){
+
+clearInterval(
+typing
+);
+
+}
+
+},35);
+
+}
 /* =========================
    SECRET TERMINAL SYSTEM
 ========================= */
@@ -341,8 +377,9 @@ commandInput.value
 
 if(commandDatabase[value]){
 
-terminalResponse.innerHTML =
-commandDatabase[value];
+typeMessage(
+commandDatabase[value]
+);
 
 /* SECRET PAGES */
 
@@ -408,9 +445,9 @@ archiveBtn.addEventListener(
 
 ()=>{
 
-terminalResponse.innerHTML=
-
-"ARCHIVE LINK ESTABLISHED // ACCESS LEVEL: LIMITED";
+typeMessage(
+"ARCHIVE LINK ESTABLISHED // ACCESS LEVEL: LIMITED"
+);
 
 }
 
@@ -426,10 +463,7 @@ fileBtn.addEventListener(
 ()=>{
 
 terminalResponse.innerHTML=
-
-"FILE 001 OPENED // PAW-TIVE STATUS: AT LARGE";
-
-}
+"FILE 001 OPENED...";
 
 );
 
