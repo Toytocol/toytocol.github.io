@@ -254,3 +254,58 @@ right:22%;
 bottom:28%;
 left:60%;
 }
+
+
+/* =========================
+   PANIC MODE
+========================= */
+
+.panic-mode{
+
+animation:
+panicFlash 0.15s infinite;
+
+}
+
+@keyframes panicFlash{
+
+0%{
+
+filter:
+brightness(1)
+hue-rotate(0deg);
+
+}
+
+25%{
+
+filter:
+brightness(1.4)
+hue-rotate(10deg);
+
+}
+
+50%{
+
+filter:
+brightness(0.7)
+hue-rotate(-10deg);
+
+}
+
+75%{
+
+filter:
+brightness(1.2)
+contrast(1.4);
+
+}
+
+100%{
+
+filter:
+brightness(1);
+
+}
+
+}
