@@ -316,17 +316,22 @@ if(commandDatabase[value]){
 terminalResponse.innerHTML =
 commandDatabase[value];
 
-}else{
+if(value==="life_09"){
 
-terminalResponse.innerHTML =
-"UNKNOWN COMMAND";
+const archive =
+document.getElementById(
+"hidden-archive"
+);
+
+if(archive){
+
+archive.style.display=
+"block";
 
 }
 
-commandInput.value = "";
-
 }
 
-});
+}
 
 }
