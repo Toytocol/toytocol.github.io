@@ -365,3 +365,41 @@ line-height:1.6;
 
 right:30px;
 }
+
+/* =========================
+   ALERT MODE
+========================= */
+
+.danger-alert{
+
+animation:
+dangerPulse 0.5s infinite;
+
+}
+
+@keyframes dangerPulse{
+
+0%{
+
+background:
+rgba(80,0,0,.4);
+
+}
+
+50%{
+
+background:
+rgba(255,0,0,.35);
+
+}
+
+100%{
+
+background:
+rgba(80,0,0,.4);
+
+}
+
+}
+
+
