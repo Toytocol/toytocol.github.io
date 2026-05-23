@@ -295,6 +295,22 @@ const commandDatabase = {
 "archive":
 "ARCHIVE LINK UNSTABLE"
 
+if(value==="paw-tive"){
+
+document.body.classList.add(
+"panic-mode"
+);
+
+setTimeout(()=>{
+
+document.body.classList.remove(
+"panic-mode"
+);
+
+},2000);
+
+}
+
 };
 
 if(commandInput){
