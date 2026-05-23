@@ -339,3 +339,41 @@ line-height:2;
 color:#66ff66;
 
 }
+
+/* =========================
+   ACTIVITY PING
+========================= */
+
+.activity-ping{
+
+position:absolute;
+
+width:14px;
+height:14px;
+
+border-radius:50%;
+
+background:#ff4444;
+
+top:45%;
+left:60%;
+
+opacity:0;
+
+z-index:12;
+
+box-shadow:
+0 0 15px red,
+0 0 30px rgba(255,0,0,.4);
+
+}
+
+.activity-ping.active{
+
+animation:
+pingPulse 2s;
+}
+
+
+
+
