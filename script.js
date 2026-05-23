@@ -551,3 +551,126 @@ setInterval(
 randomThreat,
 7000
 );
+
+/* =========================
+   LIVE INTELLIGENCE EVENTS
+========================= */
+
+const terminalMessages=[
+
+"Signal from unknown node detected",
+
+"Containment field weakening",
+
+"Meme cascade event possible",
+
+"Protocol integrity holding",
+
+"Unauthorized liquidity movement detected",
+
+"Timeline corruption event logged",
+
+"Global meme anomaly detected",
+
+"Unknown transmission detected",
+
+"Meme integrity failure prevented"
+
+];
+
+const terminalResponse =
+document.getElementById(
+"terminal-response"
+);
+
+function intelligenceEvent(){
+
+const randomMessage=
+
+terminalMessages[
+Math.floor(
+Math.random()*
+terminalMessages.length
+)
+];
+
+if(terminalResponse){
+
+terminalResponse.innerHTML=
+
+"> "+randomMessage;
+
+}
+
+}
+
+setInterval(
+intelligenceEvent,
+10000
+);
+
+/* =========================
+   RANDOM SYSTEM ALERTS
+========================= */
+
+const alerts=[
+
+"UNAUTHORIZED SHITPOSTING DETECTED",
+
+"MEME CASCADE IMMINENT",
+
+"PAN-TIVE SIGNAL INTERCEPTED",
+
+"ARCHIVE BREACH ATTEMPT",
+
+"UNKNOWN AGENT ACTIVITY",
+
+"CHAOS ENGINE INSTABILITY"
+
+];
+
+const alertBar=
+document.querySelector(
+".alert-bar"
+);
+
+function randomAlert(){
+
+const random=
+
+alerts[
+Math.floor(
+Math.random()
+*
+alerts.length
+)
+];
+
+if(alertBar){
+
+alertBar.innerHTML=
+
+"⚠ " + random + " ⚠";
+
+alertBar.classList.add(
+"danger-alert"
+);
+
+setTimeout(()=>{
+
+alertBar.classList.remove(
+"danger-alert"
+);
+
+},3000);
+
+}
+
+}
+
+setInterval(
+randomAlert,
+15000
+);
+
+
