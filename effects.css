@@ -402,4 +402,47 @@ rgba(80,0,0,.4);
 
 }
 
+/* =========================
+   BUTTON PRESS
+========================= */
+
+.button-active{
+
+transform:scale(0.96);
+
+box-shadow:
+0 0 15px rgba(255,0,0,0.3);
+
+transition:0.15s;
+}
+
+
+/* =========================
+   TERMINAL FLASH
+========================= */
+
+.terminal-flash{
+
+animation:
+terminalFlash .3s;
+}
+
+@keyframes terminalFlash{
+
+0%{
+
+background:
+rgba(0,255,0,.25);
+
+}
+
+100%{
+
+background:
+transparent;
+
+}
+
+}
+
 
