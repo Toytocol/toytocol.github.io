@@ -462,3 +462,92 @@ boot.style.display="none";
 });
 
 }
+
+/* =========================
+   LIVE CLOCK
+========================= */
+
+const liveTime =
+document.getElementById(
+"live-time"
+);
+
+function updateClock(){
+
+const now=new Date();
+
+const h=
+String(now.getHours())
+.padStart(2,"0");
+
+const m=
+String(now.getMinutes())
+.padStart(2,"0");
+
+const s=
+String(now.getSeconds())
+.padStart(2,"0");
+
+if(liveTime){
+
+liveTime.innerHTML=
+`UTC ${h}.${m}.${s}`;
+
+}
+
+}
+
+setInterval(
+updateClock,
+1000
+);
+
+updateClock();
+
+
+/* =========================
+   THREAT SYSTEM
+========================= */
+
+const threatBox =
+document.querySelector(
+".threat-box"
+);
+
+const threatLevels=[
+
+"LOW",
+"GUARDED",
+"ELEVATED",
+"HIGH",
+"SEVERE",
+"UNSTABLE"
+
+];
+
+function randomThreat(){
+
+const level=
+
+threatLevels[
+Math.floor(
+Math.random()
+*threatLevels.length
+)
+];
+
+if(threatBox){
+
+threatBox.innerHTML=
+
+`THREAT LEVEL:
+${level}`;
+
+}
+
+}
+
+setInterval(
+randomThreat,
+7000
+);
