@@ -841,3 +841,48 @@ flashTerminal,
 12000
 );
 
+/* =========================
+   ACTIVITY DETECTION
+========================= */
+
+const ping=
+
+document.getElementById(
+"activity-ping"
+);
+
+function triggerPing(){
+
+if(!ping) return;
+
+const x=
+Math.random()*80+10;
+
+const y=
+Math.random()*70+10;
+
+ping.style.left=
+x+"%";
+
+ping.style.top=
+y+"%";
+
+ping.classList.add(
+"active"
+);
+
+setTimeout(()=>{
+
+ping.classList.remove(
+"active"
+);
+
+},2000);
+
+}
+
+setInterval(
+triggerPing,
+9000
+);
+
