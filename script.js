@@ -281,25 +281,24 @@ const commandDatabase = {
 "SIGNAL DETECTED // LAST KNOWN LOCATION UNKNOWN",
 
 "life_09":
-"ACCESS RESTRICTED // FINAL LIFE PROTOCOL LOCKED",
+"FINAL LIFE PROTOCOL DETECTED",
 
 "2016":
-"CONTAINMENT BREACH ARCHIVE CORRUPTED",
+"CONTAINMENT BREACH ARCHIVE FOUND",
 
-"toytocol":
-"MEME PRESERVATION PROTOCOL ACTIVE",
+"1998":
+"ORIGIN PROTOCOL FOUND",
 
-"agent":
-"ACTIVE AGENTS ONLINE: 847",
+"agent_zero":
+"UNKNOWN AGENT DETECTED",
+
+"9lives":
+"LIFE CYCLE SYSTEM FOUND",
 
 "archive":
-"ARCHIVE LINK UNSTABLE"
+"ARCHIVE LINK STABLE"
 
-if(value==="paw-tive"){
-
-document.body.classList.add(
-"panic-mode"
-);
+};
 
 const popup =
 document.getElementById(
@@ -345,10 +344,26 @@ if(commandDatabase[value]){
 terminalResponse.innerHTML =
 commandDatabase[value];
 
-if(value==="life_09"){
+/* SECRET PAGES */
+
+if(value==="1998"){
 
 window.location.href=
-"archive.html";
+"origin.html";
+
+}
+
+if(value==="agent_zero"){
+
+window.location.href=
+"agent.html";
+
+}
+
+if(value==="9lives"){
+
+window.location.href=
+"lives.html";
 
 }
 
