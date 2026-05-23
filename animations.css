@@ -342,3 +342,33 @@ transform:scale(1);
 }
 
 }
+
+/* =========================
+   PING PULSE
+========================= */
+
+@keyframes pingPulse{
+
+0%{
+
+opacity:0;
+transform:scale(.2);
+
+}
+
+25%{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+100%{
+
+opacity:0;
+transform:scale(4);
+
+}
+
+}
+
