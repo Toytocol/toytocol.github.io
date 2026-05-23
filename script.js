@@ -335,3 +335,58 @@ archive.style.display=
 }
 
 }
+
+
+
+/* =========================
+   BUTTON ACTIONS
+========================= */
+
+const archiveBtn =
+document.getElementById(
+"archiveBtn"
+);
+
+const fileBtn =
+document.getElementById(
+"fileBtn"
+);
+
+const terminalResponse =
+document.getElementById(
+"terminal-response"
+);
+
+if(archiveBtn){
+
+archiveBtn.addEventListener(
+"click",
+
+()=>{
+
+terminalResponse.innerHTML=
+
+"ARCHIVE LINK ESTABLISHED // ACCESS LEVEL: LIMITED";
+
+}
+
+);
+
+}
+
+if(fileBtn){
+
+fileBtn.addEventListener(
+"click",
+
+()=>{
+
+terminalResponse.innerHTML=
+
+"FILE 001 OPENED // PAW-TIVE STATUS: AT LARGE";
+
+}
+
+);
+
+}
